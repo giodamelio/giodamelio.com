@@ -1,9 +1,10 @@
-baseurl = "https://giodamelio.com/blog/"
+baseurl = ""
 languageCode = "en-us"
 title = "Gio d'Amelio"
 theme = "hyde-x"
 paginate = 10
 disqusShortname = "giodamelio"
+relativeUrls = true
 
 [author]
     name = "Gio d'Amelio"
