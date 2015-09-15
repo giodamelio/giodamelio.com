@@ -1,10 +1,15 @@
 baseurl = ""
 languageCode = "en-us"
 title = "Gio d'Amelio"
-theme = "hyde-x"
+theme = "hyde-g"
 paginate = 10
 disqusShortname = "giodamelio"
 relativeUrls = true
+
+# Add a menu item
+[[menu.main]]
+    Name = "History"
+    Url = "/history"
 
 [author]
     name = "Gio d'Amelio"

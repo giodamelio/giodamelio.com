@@ -11,6 +11,10 @@ printf "Publishing to IPFS... "
 hash=$(ipfs add -qr public/ | tail -n 1)
 echo -e "\t\tDone"
 
+printf "Adding to history... "
+echo "$(date --rfc-3339=seconds),https://gateway.ipfs.io/ipfs/$hash" >> data/history.csv
+echo -e "\t\tDone"
+
 printf "Updating IPNS... "
 peerid=$(ipfs name publish $hash | cut -d " " -f 3)
 echo -e "\t\tDone"
