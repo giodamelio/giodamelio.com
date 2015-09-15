@@ -1,5 +1,3 @@
-THEME=hyde
-
 watch:
-	hugo server --port=3141 --theme=$(THEME) --buildDrafts --watch
+	hugo server --port=3141 --buildDrafts --watch
 
