@@ -5,7 +5,7 @@
   <ul style="list-style-type: none;">
   {{ range $i, $r := getCSV "," "data/history.csv" }}
     <li>
-      <a href="{{ index $r 1 | safeUrl }}">{{ index $r 0 }}</a>
+      <a href="{{ index $r 1 | safeURL }}">{{ index $r 0 }}</a>
     </li>
   {{ end }}
   </ul>
