@@ -45,4 +45,4 @@ or by viewing `https://gateway.ipfs.io/ipns/<peerID>` (notice the directory is `
 
 ## Step 5. Done
 
-That's it. You're done. Whenever you update your site, just do step 4 again, and IPNS will make sure anyone asking for your peedID gets the hash of your latest site.
+That's it. You're done. Whenever you update your site, just do step 4 again, and IPNS will make sure anyone asking for your peerID gets the hash of your latest site.
