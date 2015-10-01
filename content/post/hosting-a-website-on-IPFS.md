@@ -33,6 +33,8 @@ The hash on the last line is the root of your site, you can visit is by opening 
 
 ## Step 4. Publish to IPNS
 
+**Note**: As of the time of this writing, IPNS is unstable and published hashes only persist in the network for 24 hours. You can republish daily with a cronjob, but IPNS is under active development and will hopefully be more stable and longer lasting soon.
+
 Now you have a simple static site hosted on IPFS. The problem is, whenever you update your site, the hash will change, and any links you have shared will continue pointing to the old version. You need a way to always share the latest hash. That's where IPNS comes in. It allows you to store a reference to an IPFS hash under the namespace of your peerID (hash of your public key).
 
     $ ipfs name publish <your site hash>
