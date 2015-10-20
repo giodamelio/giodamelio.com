@@ -7,6 +7,8 @@ title = "IPFS Terminator Plugin"
 
 Here is a simple plugin that allows you to open IPFS/IPNS hashes quickly from inside [Terminator](http://gnometerminator.blogspot.com/p/introduction.html).
 
+{{% image "terminator-plugin-example.gif" "Example GIF" %}}
+
 ## Installation instructions
 
  1. Make sure you have terminator 0.9 or greater(use `terminator --version` to check)
