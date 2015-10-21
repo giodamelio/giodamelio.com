@@ -51,3 +51,6 @@ relativeUrls = true
     # Other social-like sidebar links
     rss = true  # switch to true to enable RSS icon link
 
+    # The IPNS hash of the site
+    IPNSHash = "QmWGb7PZmLb1TwsMkE1b8jVK4LGceMYMsWaSmviSucWPGG"
+
