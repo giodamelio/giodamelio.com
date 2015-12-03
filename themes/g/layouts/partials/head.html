@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="author" content="Gio d'Amelio">
+    <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.defaultDescription }}{{ end }}">
+    <meta name="keywords" content="{{ range $index, $element := .Keywords }}{{ if gt $index 0 }},{{ end }}{{ . }}{{ else }}{{ .Site.Params.defaultKeywords }}{{ end }}">
+
+    <link rel="icon" href="{{ "/favicon.png" | absURL }}">
+
+    <title>{{ .Title }} &middot; {{ .Site.Author.name }}</title>
+
+    <!-- RSS Feed -->
+    {{ $siteTitle := .Site.Title }}
+    {{ $authorName := .Site.Author.name }}
+    {{ with .RSSLink }}<link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $siteTitle }} &middot; {{ $authorName }}" />{{ end }}
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ "/bootstrap/css/bootstrap.min.css" | absURL}}" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+      // See the Getting Started docs for more information:
+      // http://getbootstrap.com/getting-started/#support-ie10-width
+      (function () {
+        'use strict';
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+          var msViewportStyle = document.createElement('style');
+          msViewportStyle.appendChild(document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+          ));
+          document.querySelector('head').appendChild(msViewportStyle);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+

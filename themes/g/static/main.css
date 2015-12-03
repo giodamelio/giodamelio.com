@@ -1,0 +1,5 @@
+/* Push the body down so it is under the navbar */
+body {
+  padding-top: 4rem;
+}
+
