@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/giodamelio/giodamelio.com/issues"
   },
-  "homepage": "https://github.com/giodamelio/giodamelio.com#readme"
+  "homepage": "https://github.com/giodamelio/giodamelio.com#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-markdown-it": "^0.1.1"
+  }
 }
