@@ -6,6 +6,7 @@ const browserSync = require('browser-sync').create();
 const layout = require('gulp-layout');
 const frontmatter = require('gulp-front-matter');
 const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
 
 const FILES = {
   MARKDOWN: './src/content/**/*.md',
@@ -28,7 +29,9 @@ gulp.task('markdown', () => {
 
 gulp.task('styles', () => {
   return gulp.src(FILES.STYLES)
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('out/styles/'))
     .pipe(browserSync.stream());
 });
@@ -48,4 +51,5 @@ gulp.task('server', ['markdown', 'styles'], () => {
   gulp.watch(FILES.OUTPUT).on('change', browserSync.reload);
 });
 
+gulp.task('default', ['markdown', 'styles']);
 gulp.task('watch', ['server']);
