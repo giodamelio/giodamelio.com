@@ -7,6 +7,7 @@ const layout = require('gulp-layout');
 const frontmatter = require('gulp-front-matter');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
+const prettyUrl = require('gulp-pretty-url');
 
 const FILES = {
   MARKDOWN: './src/content/**/*.md',
@@ -24,6 +25,7 @@ gulp.task('markdown', () => {
         engine: 'nunjucks',
       });
     }))
+    .pipe(prettyUrl())
     .pipe(gulp.dest('out/'));
 });
 
@@ -41,7 +43,6 @@ gulp.task('server', ['markdown', 'styles'], () => {
   browserSync.init({
     server: {
       baseDir: './out',
-      directory: true,
     },
     open: false,
   });
