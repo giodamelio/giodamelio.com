@@ -5,10 +5,12 @@ const markdownIt = require('gulp-markdown-it');
 const browserSync = require('browser-sync').create();
 const layout = require('gulp-layout');
 const frontmatter = require('gulp-front-matter');
+const sass = require('gulp-sass');
 
 const FILES = {
-  MARKDOWN: 'src/content/**/*.md',
-  OUTPUT: 'out/**/*',
+  MARKDOWN: './src/content/**/*.md',
+  STYLES: './src/styles/**/*.scss',
+  OUTPUT: './out/**/*',
 };
 
 gulp.task('markdown', () => {
@@ -24,8 +26,14 @@ gulp.task('markdown', () => {
     .pipe(gulp.dest('out/'));
 });
 
+gulp.task('styles', () => {
+  return gulp.src(FILES.STYLES)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('out/styles/'));
+});
+
 // Serve files and auto reload with browser sync
-gulp.task('server', ['markdown'], () => {
+gulp.task('server', ['markdown', 'styles'], () => {
   browserSync.init({
     server: {
       baseDir: './out',
@@ -35,6 +43,7 @@ gulp.task('server', ['markdown'], () => {
   });
 
   gulp.watch(FILES.MARKDOWN, ['markdown']);
+  gulp.watch(FILES.STYLES, ['styles']);
   gulp.watch(FILES.OUTPUT).on('change', browserSync.reload);
 });
 
