@@ -1,8 +1,11 @@
 const path = require('path');
 
+const consolidate = require('consolidate');
+const nunjucks = require('nunjucks');
+const browserSync = require('browser-sync').create();
+
 const gulp = require('gulp');
 const markdownIt = require('gulp-markdown-it');
-const browserSync = require('browser-sync').create();
 const layout = require('gulp-layout');
 const frontmatter = require('gulp-front-matter');
 const sass = require('gulp-sass');
@@ -15,6 +18,9 @@ const FILES = {
   STYLES: './src/styles/**/*.scss',
   OUTPUT: './out/**/*.html',
 };
+
+// Configure nunjucks
+consolidate.requires.nunjucks = nunjucks.configure('./src/layouts');
 
 gulp.task('markdown', () => {
   return gulp.src(FILES.MARKDOWN)
