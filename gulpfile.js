@@ -20,7 +20,9 @@ const FILES = {
 };
 
 // Configure nunjucks
-consolidate.requires.nunjucks = nunjucks.configure('./src/layouts');
+consolidate.requires.nunjucks = nunjucks.configure('./src/layouts', {
+  noCache: true,
+});
 
 gulp.task('markdown', () => {
   return gulp.src(FILES.MARKDOWN)
@@ -29,6 +31,7 @@ gulp.task('markdown', () => {
     .pipe(layout((file) => {
       return Object.assign(file.frontMatter, {
         layout: path.join(__dirname, 'src/layouts/', file.frontMatter.layout),
+        layoutName: path.basename(file.frontMatter.layout, '.html'),
         engine: 'nunjucks',
       });
     }))
