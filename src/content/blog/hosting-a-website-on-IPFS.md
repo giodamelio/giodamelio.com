@@ -1,7 +1,8 @@
 ---
 layout: "blog.html"
 title: "Hosting a Website on IPFS"
-categories: ["IPFS", "IPNS", "tutorial", "for-future-me"]
+author: "Gio d'Amelio"
+tags: ["IPFS", "IPNS", "tutorial", "for-future-me"]
 date: "2015-09-15T13:10:49-07:00"
 keywords: ["IPFS", "IPNS", "website", "tutorial", "static"]
 ---

@@ -3,6 +3,7 @@ const path = require('path');
 const consolidate = require('consolidate');
 const nunjucks = require('nunjucks');
 const browserSync = require('browser-sync').create();
+const moment = require('moment');
 
 const gulp = require('gulp');
 const markdownIt = require('gulp-markdown-it');
@@ -22,6 +23,9 @@ const FILES = {
 // Configure nunjucks
 consolidate.requires.nunjucks = nunjucks.configure('./src/layouts', {
   noCache: true,
+});
+consolidate.requires.nunjucks.addFilter('formatDate', (dateString, format) => {
+  return moment(dateString).format(format);
 });
 
 gulp.task('markdown', () => {

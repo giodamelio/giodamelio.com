@@ -1,7 +1,8 @@
 ---
 layout: "blog.html"
 title: "IPFS Terminator Plugin"
-categories: ["IPFS", "terminator", "terminal", "terminal-emulator"]
+author: "Gio d'Amelio"
+tags: ["IPFS", "terminator", "terminal", "terminal-emulator"]
 date: "2015-10-20T13:46:24-07:00"
 keywords: ["IPFS", "terminator", "terminal", "terminal-emulator", "website", "static"]
 ---

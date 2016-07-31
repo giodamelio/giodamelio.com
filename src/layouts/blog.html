@@ -2,6 +2,18 @@
 
 {% block body %}
 <div class="container">
+  <h1>{{ title }}</h1>
+  <span class="post-meta text-muted">
+    <span title="{{ date | formatDate }}">
+      {{ date | formatDate('MMMM D, YYYY') }}
+    </span> ·
+    {{ author }}
+    <br />
+    {% for tag in tags %}
+      <span class="tag tag-info">{{ tag }}</span>
+    {% endfor %}
+  </span>
+  <hr />
   {{ contents }}
 </div>
 {% endblock %}
