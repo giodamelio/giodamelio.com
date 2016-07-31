@@ -10,7 +10,7 @@ const sass = require('gulp-sass');
 const FILES = {
   MARKDOWN: './src/content/**/*.md',
   STYLES: './src/styles/**/*.scss',
-  OUTPUT: './out/**/*',
+  OUTPUT: './out/**/*.html',
 };
 
 gulp.task('markdown', () => {
@@ -29,7 +29,8 @@ gulp.task('markdown', () => {
 gulp.task('styles', () => {
   return gulp.src(FILES.STYLES)
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('out/styles/'));
+    .pipe(gulp.dest('out/styles/'))
+    .pipe(browserSync.stream());
 });
 
 // Serve files and auto reload with browser sync
