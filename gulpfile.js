@@ -6,8 +6,13 @@ const browserSync = require('browser-sync').create();
 const layout = require('gulp-layout');
 const frontmatter = require('gulp-front-matter');
 
-gulp.task('blog', () => {
-  return gulp.src('content/blog/*.md')
+const FILES = {
+  MARKDOWN: 'content/**/*.md',
+  OUTPUT: 'out/**/*',
+};
+
+gulp.task('markdown', () => {
+  return gulp.src(FILES.MARKDOWN)
     .pipe(frontmatter())
     .pipe(markdownIt())
     .pipe(layout((file) => {
@@ -16,21 +21,21 @@ gulp.task('blog', () => {
         engine: 'nunjucks',
       });
     }))
-    .pipe(gulp.dest('out/blog/'));
+    .pipe(gulp.dest('out/'));
 });
 
 // Serve files and auto reload with browser sync
-gulp.task('server', () => {
+gulp.task('server', ['markdown'], () => {
   browserSync.init({
-    files: [
-      'content/**/*',
-    ],
     server: {
       baseDir: './out',
       directory: true,
     },
     open: false,
   });
+
+  gulp.watch(FILES.MARKDOWN, ['markdown']);
+  gulp.watch(FILES.OUTPUT).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['blog', 'server']);
+gulp.task('watch', ['server']);
