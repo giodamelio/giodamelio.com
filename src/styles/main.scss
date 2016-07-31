@@ -1,5 +1,6 @@
 @import "../vendor/bootstrap-4.0.0-alpha.3/scss/bootstrap.scss";
 
-h1 {
-  color: red;
+// Move the body down a bit so it is not behind the navbar
+body {
+  padding-top: 5rem;
 }

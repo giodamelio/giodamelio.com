@@ -1,5 +1,5 @@
 ---
-layout: 'base.html'
+layout: 'blog.html'
 ---
 
 # Hello World
