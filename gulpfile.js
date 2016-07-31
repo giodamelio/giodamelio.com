@@ -7,7 +7,7 @@ const layout = require('gulp-layout');
 const frontmatter = require('gulp-front-matter');
 
 const FILES = {
-  MARKDOWN: 'content/**/*.md',
+  MARKDOWN: 'src/content/**/*.md',
   OUTPUT: 'out/**/*',
 };
 
@@ -17,7 +17,7 @@ gulp.task('markdown', () => {
     .pipe(markdownIt())
     .pipe(layout((file) => {
       return Object.assign(file.frontMatter, {
-        layout: path.join(__dirname, 'layouts/', file.frontMatter.layout),
+        layout: path.join(__dirname, 'src/layouts/', file.frontMatter.layout),
         engine: 'nunjucks',
       });
     }))
