@@ -11,6 +11,7 @@ const prettyUrl = require('gulp-pretty-url');
 
 const FILES = {
   MARKDOWN: './src/content/**/*.md',
+  LAYOUTS: './src/layouts/**/*.html',
   STYLES: './src/styles/**/*.scss',
   OUTPUT: './out/**/*.html',
 };
@@ -47,7 +48,7 @@ gulp.task('server', ['markdown', 'styles'], () => {
     open: false,
   });
 
-  gulp.watch(FILES.MARKDOWN, ['markdown']);
+  gulp.watch([FILES.MARKDOWN, FILES.LAYOUTS], ['markdown']);
   gulp.watch(FILES.STYLES, ['styles']);
   gulp.watch(FILES.OUTPUT).on('change', browserSync.reload);
 });
