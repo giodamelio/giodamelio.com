@@ -1,3 +1,7 @@
+---
+layout: 'base.html'
+---
+
 # Hello World
 
 Hi! Here is a list
