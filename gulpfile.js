@@ -53,7 +53,7 @@ gulp.task('styles', () => {
 });
 
 // Serve files and auto reload with browser sync
-gulp.task('server', ['markdown', 'styles'], () => {
+gulp.task('server', () => {
   browserSync.init({
     server: {
       baseDir: './out',
@@ -61,10 +61,13 @@ gulp.task('server', ['markdown', 'styles'], () => {
     open: false,
   });
 
-  gulp.watch([FILES.MARKDOWN, FILES.LAYOUTS], ['markdown']);
-  gulp.watch(FILES.STYLES, ['styles']);
+  gulp.watch([FILES.MARKDOWN, FILES.LAYOUTS], gulp.series('markdown'));
+  gulp.watch(FILES.STYLES, gulp.series('styles'));
   gulp.watch(FILES.OUTPUT).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['markdown', 'styles']);
-gulp.task('watch', ['server']);
+gulp.task('default', gulp.parallel('markdown', 'styles'));
+gulp.task('watch', gulp.series(
+  gulp.parallel('markdown', 'styles'),
+  'server'
+))
