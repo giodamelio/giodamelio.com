@@ -15,7 +15,7 @@
     <a class="navbar-brand" href="/">Gio d'Amelio</a>
     <ul class="nav navbar-nav">
       {{ nav.item('Home', '/', layoutName == 'home') }}
-      {{ nav.item('Blog', '/blog', layoutName == 'blog') }}
+      {{ nav.item('Blog', '/blog', layoutName == 'blog' or layoutName == 'blog_post') }}
       {{ nav.item('Contact', '/contact', layoutName == 'contact') }}
     </ul>
   </nav>

@@ -1,3 +1,4 @@
+require('pretty-error').start();
 const gulp = require('gulp');
 
 gulp.task('markdown', require('./gulp-tasks/markdown.gulp'));

@@ -1,5 +1,5 @@
 ---
-layout: "blog.html"
+layout: "blog_post.html"
 title: "Hosting a Website on IPFS"
 author: "Gio d'Amelio"
 tags: ["IPFS", "IPNS", "tutorial", "for-future-me"]
@@ -17,7 +17,7 @@ Install IPFS as described at [https://ipfs.io/docs/install/](https://ipfs.io/doc
 
 All you need is a simple static html page, as long as ALL the links are relative. For the purposes of this tutorial I have put a [simple hello world on gist](https://gist.github.com/giodamelio/7f01283fafdffee2ce2e) ([direct download](https://gist.github.com/giodamelio/7f01283fafdffee2ce2e/archive/6c06c2e55e0d1932bfb013f806378e7fee07654b.zip), [view](http://bl.ocks.org/giodamelio/raw/7f01283fafdffee2ce2e/)).
 
-{{% gist "giodamelio/7f01283fafdffee2ce2e" %}}
+{{ embed.gist("giodamelio", "7f01283fafdffee2ce2e") }}
 
 ## Step 3. Add to IPFS
 

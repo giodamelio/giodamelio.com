@@ -1,5 +1,5 @@
 ---
-layout: "blog.html"
+layout: "blog_post.html"
 title: "IPFS Terminator Plugin"
 author: "Gio d'Amelio"
 tags: ["IPFS", "terminator", "terminal", "terminal-emulator"]
@@ -9,7 +9,7 @@ keywords: ["IPFS", "terminator", "terminal", "terminal-emulator", "website", "st
 
 Here is a simple plugin that allows you to open IPFS/IPNS hashes quickly from inside [Terminator](http://gnometerminator.blogspot.com/p/introduction.html).
 
-{{% image "terminator-plugin-example.gif" "Example GIF" %}}
+![Example GIF](terminator-plugin-example.gif)
 
 ## Installation instructions
 
@@ -30,5 +30,5 @@ Here is a quick command to test that it is working.
 
 ## Full source
 
-{{% gist "giodamelio/4185781d2a36a600555e" %}}
+{{ embed.gist("giodamelio", "4185781d2a36a600555e") }}
 
