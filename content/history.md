@@ -1,5 +1,0 @@
-+++
-layout = "history"
-type = "history"
-+++
-
