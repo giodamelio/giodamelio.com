@@ -1,8 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+
 import App from '../src/app';
 
 it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  shallow(<App />);
+});
+
+it('contains correct text', () => {
+  const app = shallow(<App />);
+  expect(app.find('h1').text()).toBe('Hello World!');
 });
