@@ -1,17 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Match, Miss, Link } from 'react-router';
 
-function Home() {
-  return <h1>Home</h1>;
-}
-
-function Test() {
-  return <h1>Test</h1>;
-}
-
-function Error404() {
-  return <h1>Error: 404</h1>;
-}
+import { Home, Test, Error404 } from './pages';
 
 function App() {
   return (
