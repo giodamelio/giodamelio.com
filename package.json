@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js test/**/*.js"
+    "lint": "eslint src/*.js src/**/*.js test/**/*.js"
   },
   "config": {
     "ghooks": {
