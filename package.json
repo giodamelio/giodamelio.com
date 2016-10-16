@@ -81,7 +81,7 @@
     ],
     "moduleNameMapper": {
       "^.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/file_stub.js",
-      "^.+\\.css$": "<rootDir>/config/jest/css_stub.js"
+      "^.+\\.(css|scss)$": "<rootDir>/config/jest/css_stub.js"
     },
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
