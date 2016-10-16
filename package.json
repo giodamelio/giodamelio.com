@@ -57,6 +57,7 @@
     "history": "^4.3.0",
     "radium": "^0.18.1",
     "react": "^15.3.2",
+    "react-bootstrap": "^0.30.5",
     "react-dom": "^15.3.2",
     "react-router": "4.0.0-alpha.4"
   },
