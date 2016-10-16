@@ -4,6 +4,7 @@ import radium from 'radium';
 import { Navbar, Nav } from 'react-bootstrap';
 
 import { Home, Test, Error404 } from './pages';
+import { RouterLink } from './components';
 
 import './app.scss';
 
@@ -19,16 +20,14 @@ function App() {
         <Navbar inverse>
           <Navbar.Header>
             <Navbar.Brand>
-              <a href="/">Gio d'Amelio</a>
+              <Link to="/">
+                Gio d'Amelio
+              </Link>
             </Navbar.Brand>
           </Navbar.Header>
           <Nav>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/test">Test</Link>
-            </li>
+            <RouterLink to="/" activeOnlyWhenExact>Home</RouterLink>
+            <RouterLink to="/test">Test</RouterLink>
           </Nav>
         </Navbar>
 
