@@ -3,7 +3,7 @@ import { BrowserRouter, Link, Match, Miss } from 'react-router';
 import radium from 'radium';
 import { Navbar, Nav } from 'react-bootstrap';
 
-import { Home, Test, Error404 } from './pages';
+import { Home, Blog, Error404 } from './pages';
 import { RouterLink } from './components';
 
 import './app.scss';
@@ -27,12 +27,12 @@ function App() {
           </Navbar.Header>
           <Nav>
             <RouterLink to="/" activeOnlyWhenExact>Home</RouterLink>
-            <RouterLink to="/test">Test</RouterLink>
+            <RouterLink to="/blog">Blog</RouterLink>
           </Nav>
         </Navbar>
 
         <Match exactly pattern="/" component={Home} />
-        <Match pattern="/test" component={Test} />
+        <Match pattern="/blog" component={Blog} />
 
         <Miss component={Error404} />
       </div>
