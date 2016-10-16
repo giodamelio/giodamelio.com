@@ -5,6 +5,8 @@ import radium from 'radium';
 import { Home, Test, Error404 } from './pages';
 import { Navbar } from './components';
 
+import './app.scss';
+
 const styles = {
   display: 'flex',
   flexDirection: 'column',
