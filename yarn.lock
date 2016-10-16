@@ -1305,7 +1305,7 @@ commander@~2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.1.0.tgz#d121bbae860d9992a3d517ba96f56588e47c6781"
 
-commander@~2.8.1, commander@2.8.x:
+commander@2.8.x:
   version "2.8.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.8.1.tgz#06be367febfda0c330aa1e2a072d3dc9762425d4"
   dependencies:
@@ -1617,12 +1617,6 @@ detect-indent@^3.0.1:
     get-stdin "^4.0.1"
     minimist "^1.1.0"
     repeating "^1.1.0"
-
-detect-port@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/detect-port/-/detect-port-1.0.0.tgz#10d0e0bf0179862c553187273f7a3b45e7a90607"
-  dependencies:
-    commander "~2.8.1"
 
 diff@^3.0.0:
   version "3.0.1"
