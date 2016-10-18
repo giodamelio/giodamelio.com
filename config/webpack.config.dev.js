@@ -1,3 +1,5 @@
+const path = require('path');
+
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 const findCacheDir = require('find-cache-dir');
@@ -148,6 +150,10 @@ module.exports = {
           limit: 10000,
           name: 'static/media/[name].[hash:8].[ext]',
         },
+      },
+      {
+        test: /\.md$/,
+        loader: path.join(__dirname, './loaders/markdown'),
       },
     ],
   },

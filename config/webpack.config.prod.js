@@ -1,4 +1,5 @@
 const url = require('url');
+const path = require('path');
 
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
@@ -9,15 +10,15 @@ const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
-function ensureSlash(path, needsSlash) {
-  const hasSlash = path.endsWith('/');
+function ensureSlash(inpath, needsSlash) {
+  const hasSlash = inpath.endsWith('/');
   if (hasSlash && !needsSlash) {
-    return path.substr(path, path.length - 1);
+    return path.substr(inpath, inpath.length - 1);
   }
   else if (!hasSlash && needsSlash) {
-    return `${path}/`;
+    return `${inpath}/`;
   }
-  return path;
+  return inpath;
 }
 
 // We use "homepage" field to infer "public path" at which the app is served.
@@ -158,6 +159,10 @@ module.exports = {
           limit: 10000,
           name: 'static/media/[name].[hash:8].[ext]',
         },
+      },
+      {
+        test: /\.md$/,
+        loader: path.join(__dirname, './loaders/markdown'),
       },
     ],
   },
