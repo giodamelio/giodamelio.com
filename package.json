@@ -72,7 +72,7 @@
   "config": {
     "ghooks": {
       "pre-commit": "npm run lint",
-      "pre-push": "npm run lint && npm test"
+      "pre-push": "npm run lint && CI=true npm test"
     }
   },
   "jest": {
