@@ -7,6 +7,7 @@ export default {
     {
       text: 'Home',
       url: '/',
+      exact: true,
     },
     {
       text: 'TEST',

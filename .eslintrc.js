@@ -6,9 +6,8 @@ module.exports = {
     node: true,
   },
   extends: ['@giodamelio/thehelpining'],
-  // required to lint *.vue files
-  plugins: ['html'],
-  // add your custom rules here
-  rules: {},
-  globals: {},
+  plugins: ['html'], // Required to lint *.vue files
+  rules: {
+    'immutable/no-this': 'off',
+  },
 };
