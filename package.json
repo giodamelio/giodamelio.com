@@ -5,6 +5,7 @@
   "author": "Gio d'Amelio <giodamelio@gmail.com>",
   "private": true,
   "dependencies": {
+    "normalize.css": "^7.0.0",
     "nuxt": "latest"
   },
   "scripts": {
