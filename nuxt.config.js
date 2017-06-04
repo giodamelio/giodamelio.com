@@ -11,12 +11,18 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
+
   // Load some css
   css: ['normalize.css/normalize.css', 'bulma/css/bulma.css'],
+
+  // Modules
+  modules: ['@nuxtjs/font-awesome'],
+
   /*
   ** Customize the progress-bar color
   */
   loading: { color: '#3B8070' },
+
   /*
   ** Build configuration
   */
