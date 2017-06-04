@@ -57,7 +57,7 @@
       </ul>
     </aside>
 
-    <nuxt/>
+    <nuxt :class="{ dim: showHamburgerMenu }" />
   </div>
 </template>
 
@@ -86,4 +86,20 @@ export default {
 </script>
 
 <style>
+  .dim {
+    position: relative
+  }
+
+  /* TODO: figure out better height method */
+  .dim::after {
+    content: " ";
+    z-index: 10;
+    display: block;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
 </style>
