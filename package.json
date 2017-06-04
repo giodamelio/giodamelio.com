@@ -8,7 +8,7 @@
     "nuxt": "latest"
   },
   "scripts": {
-    "dev": "nuxt",
+    "dev": "PORT=3141 nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
