@@ -45,6 +45,7 @@
 
     <!-- Hamburger menu -->
     <aside v-show="showHamburgerMenu">
+      <!-- Links -->
       <ul class="menu-list">
         <li v-for="link in navbar.links">
           <nuxt-link active-class="is-active"
@@ -55,6 +56,21 @@
           </nuxt-link>
         </li>
       </ul>
+
+      <!-- Social -->
+      <section class="columns is-multiline menu-label menu-social is-mobile">
+        <a class="column is-narrow nav-item"
+           v-for="site in navbar.social"
+           target="_blank"
+           rel="noopener noreferrer"
+           :href="site.url"
+           :key="site.url"
+            @click="toggleHamburgerMenu">
+          <i class="fa fa-3x"
+             :class="'fa-' + site.icon"
+             aria-hidden="true"></i>
+        </a>
+      </section>
     </aside>
 
     <nuxt :class="{ dim: showHamburgerMenu }" />
@@ -101,5 +117,14 @@ export default {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-social {
+    margin: 0.5em !important;
+  }
+
+  .menu-social a {
+    padding: 0.2em;
+    text-align: center;
   }
 </style>
