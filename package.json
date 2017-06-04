@@ -5,6 +5,7 @@
   "author": "Gio d'Amelio <giodamelio@gmail.com>",
   "private": true,
   "dependencies": {
+    "bulma": "^0.4.2",
     "normalize.css": "^7.0.0",
     "nuxt": "latest"
   },

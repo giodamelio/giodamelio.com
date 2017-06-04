@@ -12,7 +12,7 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
   // Load some css
-  css: ['normalize.css/normalize.css'],
+  css: ['normalize.css/normalize.css', 'bulma/css/bulma.css'],
   /*
   ** Customize the progress-bar color
   */
