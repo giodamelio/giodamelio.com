@@ -73,7 +73,8 @@
       </section>
     </aside>
 
-    <nuxt :class="{ dim: showHamburgerMenu }" />
+    <nuxt :class="{ dim: showHamburgerMenu }"
+          @click.native="closeHamburgerMenu"/>
   </div>
 </template>
 
@@ -96,6 +97,9 @@ export default {
   methods: {
     toggleHamburgerMenu() {
       this.showHamburgerMenu = !this.showHamburgerMenu;
+    },
+    closeHamburgerMenu() {
+      this.showHamburgerMenu = false;
     },
   },
 };
@@ -120,6 +124,7 @@ export default {
   }
 
   .menu-social {
+    /* TODO: get rid of this important */
     margin: 0.5em !important;
   }
 
