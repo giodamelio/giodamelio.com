@@ -10,8 +10,8 @@ export default {
       exact: true,
     },
     {
-      text: 'TEST',
-      url: '/test',
+      text: 'Blog',
+      url: '/blog',
     },
   ],
   social: [
