@@ -1,6 +1,9 @@
 module.exports = {
   extends: ['@giodamelio/thehelpining/node'],
   rules: {
-    'eslint-plugin-security/detect-no-csrf-before-method-override': 'off',
+    'no-process-env': 'off',
+    'no-process-exit': 'off',
+    'thehelp/no-mutation': 'off',
+    'arrow-parens': 'off',
   },
 };
