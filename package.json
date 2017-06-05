@@ -7,11 +7,12 @@
   "dependencies": {
     "@nuxtjs/font-awesome": "^1.0.1",
     "bulma": "^0.4.2",
+    "express": "^4.15.3",
     "normalize.css": "^7.0.0",
     "nuxt": "latest"
   },
   "scripts": {
-    "dev": "PORT=3141 nuxt",
+    "dev": "node server/index.js",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
