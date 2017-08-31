@@ -5,9 +5,9 @@
   "author": "",
   "private": true,
   "dependencies": {
-    "nuxtent": "latest",
-    "nuxt": "1.0.0-alpha.3",
-    "@nuxtjs/axios": "latest"
+    "@nuxtjs/axios": "latest",
+    "nuxt": "^1.0.0-rc8",
+    "nuxtent": "latest"
   },
   "scripts": {
     "dev": "nuxt",
