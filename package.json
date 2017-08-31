@@ -1,10 +1,30 @@
 {
   "name": "giodamelio.com",
   "version": "1.0.0",
-  "description": "My website",
-  "author": "Gio d'Amelio <giodamelio@gmail.com>",
+  "description": "Gio's Website",
+  "author": "",
   "private": true,
-  "dependencies": {},
-  "scripts": {},
-  "devDependencies": {}
+  "dependencies": {
+    "nuxtent": "latest",
+    "nuxt": "1.0.0-alpha.3",
+    "@nuxtjs/axios": "latest"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "precommit": "npm run lint"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.6.1",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1"
+  }
 }
