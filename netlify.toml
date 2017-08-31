@@ -1,0 +1,6 @@
+[build]
+  command = "NODE_ENV=production yarn generate"
+  publish = "dist/"
+
+[template.environment]
+  NODE_ENV = "production"
