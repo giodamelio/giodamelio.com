@@ -18,6 +18,7 @@
 
 <script>
 import Logo from '~/components/Logo.vue'
+import '~/content/test.md';
 
 export default {
   components: {

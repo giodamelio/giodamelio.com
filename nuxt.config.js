@@ -1,3 +1,5 @@
+const WebpackDirectoryPlugin = require('./webpack-directory-plugin');
+
 module.exports = {
   /*
   ** Headers of the page
@@ -22,8 +24,8 @@ module.exports = {
     /*
     ** Run ESLINT on save
     */
-    extend(config, ctx) {
-      if (ctx.dev && ctx.isClient) {
+    extend(config, { isDev, isClient }) {
+      if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -31,6 +33,20 @@ module.exports = {
           exclude: /(node_modules)/,
         });
       }
+
+      config.module.rules.push({
+        test: /\.md$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+          {
+            loader: 'markdown-loader',
+            options: {},
+          },
+        ],
+      });
     },
   },
 };
