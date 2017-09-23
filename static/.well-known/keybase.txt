@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/giodamelio
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://giodamelio.com
+  * I am giodamelio (https://keybase.io/giodamelio) on keybase.
+  * I have a public key ASBRPgq5uNXpUg_PRUumToevHgEg406bAFhCMmk7f-vmkQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01016036104aa84f291d1ecad7e9a92654379dfe156b61f07b512656b5622dc309a20a",
+      "host": "keybase.io",
+      "kid": "0120513e0ab9b8d5e9520fcf454ba64e87af1e0120e34e9b00584232693b7febe6910a",
+      "uid": "c0576469754b5114788fcbb0468c7219",
+      "username": "giodamelio"
+    },
+    "merkle_root": {
+      "ctime": 1506206627,
+      "hash": "9582821ca6f9d59b70652a4b1f877cd65fc21d99cc8977d255b29c2066d2f88cec9df5ca047a02304b5e692e7575631cf912e3acefaa4dc268b331f9dbdfc76d",
+      "hash_meta": "e2272b72055d2fc9f624711fd13dc4c49d9eaff54816fcde79a1850e742dcb8d",
+      "seqno": 1449661
+    },
+    "service": {
+      "hostname": "giodamelio.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.32"
+  },
+  "ctime": 1506206638,
+  "expire_in": 504576000,
+  "prev": "9182180656ee490ee766ea675a1520e3d4f83892858fa591f7e098f264d65063",
+  "seqno": 33,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgUT4KubjV6VIPz0VLpk6Hrx4BIONOmwBYQjJpO3/r5pEKp3BheWxvYWTFA0l7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxNjAzNjEwNGFhODRmMjkxZDFlY2FkN2U5YTkyNjU0Mzc5ZGZlMTU2YjYxZjA3YjUxMjY1NmI1NjIyZGMzMDlhMjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwNTEzZTBhYjliOGQ1ZTk1MjBmY2Y0NTRiYTY0ZTg3YWYxZTAxMjBlMzRlOWIwMDU4NDIzMjY5M2I3ZmViZTY5MTBhIiwidWlkIjoiYzA1NzY0Njk3NTRiNTExNDc4OGZjYmIwNDY4YzcyMTkiLCJ1c2VybmFtZSI6Imdpb2RhbWVsaW8ifSwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE1MDYyMDY2MjcsImhhc2giOiI5NTgyODIxY2E2ZjlkNTliNzA2NTJhNGIxZjg3N2NkNjVmYzIxZDk5Y2M4OTc3ZDI1NWIyOWMyMDY2ZDJmODhjZWM5ZGY1Y2EwNDdhMDIzMDRiNWU2OTJlNzU3NTYzMWNmOTEyZTNhY2VmYWE0ZGMyNjhiMzMxZjlkYmRmYzc2ZCIsImhhc2hfbWV0YSI6ImUyMjcyYjcyMDU1ZDJmYzlmNjI0NzExZmQxM2RjNGM0OWQ5ZWFmZjU0ODE2ZmNkZTc5YTE4NTBlNzQyZGNiOGQiLCJzZXFubyI6MTQ0OTY2MX0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJnaW9kYW1lbGlvLmNvbSIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjMyIn0sImN0aW1lIjoxNTA2MjA2NjM4LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwicHJldiI6IjkxODIxODA2NTZlZTQ5MGVlNzY2ZWE2NzVhMTUyMGUzZDRmODM4OTI4NThmYTU5MWY3ZTA5OGYyNjRkNjUwNjMiLCJzZXFubyI6MzMsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAUeVdPTbI39kyw3esq22M2GNXvCJAeZJc5q8YeX2PSSrQd5dM1S7p3FniuLI90WPqfzujs3HodXrTiP9fCR4aC6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIPCiZOKEmdRk0NIc5Ew1NiIQB948TwAU4ZpSispcEGc/o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/giodamelio
+
+==================================================================
