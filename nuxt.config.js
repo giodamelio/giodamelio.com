@@ -1,5 +1,3 @@
-const WebpackDirectoryPlugin = require('./webpack-directory-plugin');
-
 module.exports = {
   /*
   ** Headers of the page
