@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classnames from 'classnames';
 
-const NavbarLink = ({ children, ...props }) => (
-  <Link className="navbar-item" {...props}>
+const NavbarLink = ({ children, noActiveClass, ...props }) => (
+  <Link
+    className="navbar-item"
+    /* Allow overriding weather we add the active class */
+    {...(!noActiveClass ? { activeClassName: 'is-active' } : {})}
+    {...props}
+  >
     {children}
   </Link>
 );
@@ -39,9 +44,15 @@ class Header extends Component {
     const { isBurgerMenuOpen } = this.state;
 
     return (
-      <nav className="navbar" role="navigation" aria-label="main navigation">
+      <nav
+        className="navbar is-primary"
+        role="navigation"
+        aria-label="main navigation"
+      >
         <div className="navbar-brand">
-          <NavbarLink to="/">{siteTitle}</NavbarLink>
+          <NavbarLink to="/" noActiveClass>
+            {siteTitle}
+          </NavbarLink>
 
           {/* Disable because Bulma needs this element to be an 'a' tag */}
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
