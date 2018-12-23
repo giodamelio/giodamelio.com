@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gio\'s Interwebs Braindump',
+    title: "Gio's Interwebs Braindump",
     description: 'A place where I write some things and show some things off',
     author: '@giodamelio',
   },
@@ -31,4 +31,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
   ],
-}
+};
