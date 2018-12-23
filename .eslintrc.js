@@ -17,6 +17,6 @@ module.exports = {
     ],
     'import/first': 'error',
     'import/group-exports': 'error',
-    'import/no-unassigned-import': ['error', { allow: ['**/*.css'] }],
+    'import/no-unassigned-import': ['error', { allow: ['**/*.scss'] }],
   },
 };

@@ -36,20 +36,26 @@ class Header extends Component {
 
   render() {
     const { siteTitle } = this.props;
+    const { isBurgerMenuOpen } = this.state;
+
     return (
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <NavbarLink to="/">{siteTitle}</NavbarLink>
 
+          {/* Disable because Bulma needs this element to be an 'a' tag */}
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a
             role="button"
             className={classnames('navbar-burger', 'burger', {
-              'is-active': this.state.isBurgerMenuOpen,
+              'is-active': isBurgerMenuOpen,
             })}
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarMain"
+            tabIndex={0}
             onClick={this.toggleBurgerMenu}
+            onKeyPress={this.toggleBurgerMenu}
           >
             <span aria-hidden="true" />
             <span aria-hidden="true" />
@@ -60,7 +66,7 @@ class Header extends Component {
         <div
           id="navbarMain"
           className={classnames('navbar-menu', {
-            'is-active': this.state.isBurgerMenuOpen,
+            'is-active': isBurgerMenuOpen,
           })}
         >
           <div className="navbar-start">
