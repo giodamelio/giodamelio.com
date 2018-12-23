@@ -25,7 +25,9 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.{js,json}\" \"*.js\"",
+    "format": "npm run format-base -- --write",
+    "format-list": "npm run format-base -- --list-different",
+    "format-base": "prettier \"src/**/*.{js,json}\" \"*.js\"",
     "lint": "eslint src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -37,10 +39,17 @@
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-react": "7.11.1",
+    "husky": "1.2.1",
     "prettier": "1.15.3"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format-list",
+      "pre-push": "npm run lint"
+    }
   }
 }
