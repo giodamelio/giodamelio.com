@@ -54,5 +54,5 @@
 <script>
 export default {
   name: 'StyleTest'
-}
+};
 </script>

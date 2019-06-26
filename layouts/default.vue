@@ -15,7 +15,7 @@ export default {
           url: 'https://github.com/giodamelio'
         }
       ]
-    }
+    };
   }
-}
+};
 </script>
