@@ -16,7 +16,7 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     bodyAttrs: {
-      class: 'hack dark-grey'
+      class: 'hack base16-default-dark'
     }
   },
   /*
@@ -26,10 +26,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [
-    'hack',
-    'hack/dist/dark-grey.css'
-  ],
+  css: ['hack', '@/assets/base16-default-dark.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -37,9 +34,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    '@nuxtjs/eslint-module'
-  ],
+  modules: ['@nuxtjs/eslint-module'],
   /*
    ** Build configuration
    */

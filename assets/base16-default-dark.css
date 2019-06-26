@@ -1,0 +1,167 @@
+:root {
+  --base00: #181818;
+  --base01: #282828;
+  --base02: #383838;
+  --base03: #585858;
+  --base04: #b8b8b8;
+  --base05: #d8d8d8;
+  --base06: #e8e8e8;
+  --base07: #f8f8f8;
+  --base08: #ab4642;
+  --base09: #dc9656;
+  --base0A: #f7ca88;
+  --base0B: #a1b56c;
+  --base0C: #86c1b9;
+  --base0D: #7cafc2;
+  --base0E: #ba8baf;
+  --base0F: #a16946;
+}
+
+.base16-default-dark {
+  background-color: var(--base00);
+  color: var(--base05);
+}
+.base16-default-dark h1,
+.base16-default-dark h2,
+.base16-default-dark h3,
+.base16-default-dark h4,
+.base16-default-dark h5,
+.base16-default-dark h6 {
+  color: var(--base0B);
+}
+.base16-default-dark h1 a,
+.base16-default-dark h2 a,
+.base16-default-dark h3 a,
+.base16-default-dark h4 a,
+.base16-default-dark h5 a,
+.base16-default-dark h6 a {
+  color: var(--base0E);
+  border-bottom-color: var(--base0E);
+}
+.base16-default-dark h1 a:hover,
+.base16-default-dark h2 a:hover,
+.base16-default-dark h3 a:hover,
+.base16-default-dark h4 a:hover,
+.base16-default-dark h5 a:hover,
+.base16-default-dark h6 a:hover {
+  background-color: var(--base0E);
+  color: var(--base02);
+}
+.base16-default-dark a {
+  color: var(--base0E);
+  border-bottom-color: var(--base0E);
+}
+.base16-default-dark a:hover {
+  background-color: var(--base0E);
+  color: var(--base02);
+}
+.base16-default-dark a:visited {
+  border-color: var(--base0A);
+  color: var(--base0A);
+}
+.base16-default-dark a:visited:hover {
+  color: var(--base02);
+  background-color: var(--base0A);
+}
+.base16-default-dark pre {
+  background-color: var(--base01);
+  padding: 0;
+  border: none;
+}
+.base16-default-dark pre code {
+  color: var(--base0B);
+}
+.base16-default-dark .progress-bar-filled:after,
+.base16-default-dark .progress-bar-filled:before,
+.base16-default-dark code,
+.base16-default-dark strong {
+  color: var(--base0B);
+}
+.base16-default-dark code {
+  font-weight: 100;
+}
+.base16-default-dark .progress-bar-filled {
+  background-color: var(--base0B);
+}
+.base16-default-dark table {
+  color: var(--base0A);
+}
+.base16-default-dark table td,
+.base16-default-dark table th {
+  border-color: var(--base03);
+}
+.base16-default-dark table tbody td:first-child {
+  color: var(--base03);
+}
+.base16-default-dark .form-control,
+.base16-default-dark .form-group label {
+  color: var(--base0A);
+  border-color: var(--base0B);
+}
+.base16-default-dark .form-group.form-textarea label:after {
+  background-color: var(--base01);
+}
+.base16-default-dark .form-control:focus {
+  border-color: var(--base09);
+  color: var(--base09);
+}
+.base16-default-dark textarea.form-control {
+  color: var(--base0A);
+}
+.base16-default-dark .card {
+  border-color: var(--base0B);
+}
+.base16-default-dark .card .card-header {
+  background-color: transparent;
+  color: var(--base0A);
+  border-bottom: 1px solid var(--base0B);
+}
+.base16-default-dark .btn.btn-ghost.btn-default-dark {
+  border-color: var(--base0D);
+  color: var(--base0D);
+}
+.base16-default-dark .btn.btn-ghost.btn-default-dark:focus,
+.base16-default-dark .btn.btn-ghost.btn-default-dark:hover {
+  z-index: 1;
+  border-color: var(--base05);
+  color: var(--base05);
+}
+.base16-default-dark .btn.btn-ghost.btn-primary:focus,
+.base16-default-dark .btn.btn-ghost.btn-primary:hover {
+  border-color: var(--base0B);
+  color: var(--base0B);
+}
+.base16-default-dark .btn.btn-ghost.btn-success:focus,
+.base16-default-dark .btn.btn-ghost.btn-success:hover {
+  border-color: var(--base0B);
+  color: var(--base0B);
+}
+.base16-default-dark .btn.btn-ghost.btn-info:focus,
+.base16-default-dark .btn.btn-ghost.btn-info:hover {
+  border-color: var(--base0D);
+  color: var(--base0D);
+}
+.base16-default-dark .btn.btn-ghost.btn-error:focus,
+.base16-default-dark .btn.btn-ghost.btn-error:hover {
+  border-color: var(--base08);
+  color: var(--base08);
+}
+.base16-default-dark .btn.btn-ghost.btn-warning:focus,
+.base16-default-dark .btn.btn-ghost.btn-warning:hover {
+  border-color: var(--base09);
+  color: var(--base09);
+}
+.base16-default-dark .avatarholder,
+.base16-default-dark .placeholder {
+  background-color: transparent;
+  border-color: var(--base03);
+}
+.base16-default-dark .menu .menu-item {
+  color: var(--base0A);
+  border-color: var(--base0B);
+}
+.base16-default-dark .menu .menu-item.active,
+.base16-default-dark .menu .menu-item:hover {
+  color: var(--base0A);
+  border-color: var(--base0A);
+}
