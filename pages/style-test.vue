@@ -305,21 +305,21 @@ P R E F O R M A T T E D T E X T
           <div>
             <h3>No <code>&lt;figure&gt;</code> element</h3>
             <p>
-              <img src="http://placekitten.com/480/480" alt="Image alt text" />
+              <img src="https://placekitten.com/480/480" alt="Image alt text" />
             </p>
             <h3>
               Wrapped in a <code>&lt;figure&gt;</code> element, no
               <code>&lt;figcaption&gt;</code>
             </h3>
             <figure>
-              <img src="http://placekitten.com/420/420" alt="Image alt text" />
+              <img src="https://placekitten.com/420/420" alt="Image alt text" />
             </figure>
             <h3>
               Wrapped in a <code>&lt;figure&gt;</code> element, with a
               <code>&lt;figcaption&gt;</code>
             </h3>
             <figure>
-              <img src="http://placekitten.com/420/420" alt="Image alt text" />
+              <img src="https://placekitten.com/420/420" alt="Image alt text" />
               <figcaption>Here is a caption for this image.</figcaption>
             </figure>
           </div>
@@ -403,7 +403,7 @@ P R E F O R M A T T E D T E X T
               <input
                 id="input__webaddress"
                 type="url"
-                placeholder="http://yoursite.com"
+                placeholder="https://yoursite.com"
               />
             </p>
             <p>
@@ -601,8 +601,8 @@ P R E F O R M A T T E D T E X T
     </main>
     <footer role="contentinfo">
       <p>
-        Made by <a href="http://twitter.com/cbracco">@cbracco</a>. Code on
-        <a href="http://github.com/cbracco/html5-test-page">GitHub</a>.
+        Made by <a href="https://twitter.com/cbracco">@cbracco</a>. Code on
+        <a href="https://github.com/cbracco/html5-test-page">GitHub</a>.
       </p>
     </footer>
   </div>
