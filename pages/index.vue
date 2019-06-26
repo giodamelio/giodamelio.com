@@ -1,6 +1,10 @@
 <template>
   <section class="section">
     <div class="columns is-mobile">
+      <card title="test" icon="exclamation">
+        TESTING
+      </card>
+
       <card title="Free" icon="github-circle">
         Open source on
         <a href="https://github.com/buefy/buefy">
