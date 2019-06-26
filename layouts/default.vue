@@ -7,13 +7,21 @@
     >
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="~assets/buefy.png" alt="Buefy" height="28" />
+          Gio's Internet Braindump
         </a>
 
         <div class="navbar-burger">
           <span />
           <span />
           <span />
+        </div>
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item" v-for="(item, key) of social" :key="key">
+          <a :href="item.url" :title="item.title">
+            <b-icon :icon="item.icon" />
+          </a>
         </div>
       </div>
     </nav>
@@ -26,6 +34,13 @@
 export default {
   data() {
     return {
+      social: [
+        {
+          title: 'Github',
+          icon: 'github-circle',
+          url: 'https://github.com/giodamelio'
+        }
+      ],
       items: [
         {
           title: 'Home',
