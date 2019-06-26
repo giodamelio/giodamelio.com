@@ -14,7 +14,6 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt-buefy": "^0.3.2",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
