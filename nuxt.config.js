@@ -14,7 +14,10 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    bodyAttrs: {
+      class: 'hack dark-grey'
+    }
   },
   /*
    ** Customize the progress-bar color
@@ -23,7 +26,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    'hack',
+    'hack/dist/dark-grey.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    */

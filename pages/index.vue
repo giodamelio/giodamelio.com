@@ -1,7 +1,7 @@
 <template>
   <section>
-    <h1 class="title">Gio's Internet Braindump</h1>
-    <h2 class="subtitle">
+    <h1>Gio's Internet Braindump</h1>
+    <h2>
       Some things will be here eventually. You should come back and check every
       day.
     </h2>
