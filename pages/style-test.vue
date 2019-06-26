@@ -41,6 +41,10 @@
       <i>italicized</i> text?
     </p>
     <p>
+      Here is some <s>stricken</s> text. Also what about
+      <del>deleted</del> text?
+    </p>
+    <p>
       Here is some
       <code>inline code</code>.
     </p>

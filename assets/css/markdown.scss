@@ -109,6 +109,17 @@ i {
     content: '_';
   }
 }
+s,
+del {
+  &:before {
+    content: '~~';
+    display: inline-block;
+  }
+  &:after {
+    content: '~~';
+    display: inline-block;
+  }
+}
 code {
   &:before {
     content: '`';
