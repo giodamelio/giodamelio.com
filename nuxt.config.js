@@ -26,7 +26,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['hack', '@/assets/base16-default-dark.css'],
+  css: ['@/assets/css/markdown.scss'],
   /*
    ** Plugins to load before mounting the App
    */
