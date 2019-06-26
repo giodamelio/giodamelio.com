@@ -1,0 +1,44 @@
+@import 'colors';
+@import 'markdown';
+
+// Set the colors for the main body
+body {
+  background-color: $primaryColor;
+  color: $primaryTextColor;
+}
+
+// ---- Headings --------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1rem; // Make all headings the same size
+
+  // Calm the margins down a bit
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+
+  // Give them a color
+  color: $headingColor;
+}
+
+// Remove the h1's bottom margin all togather because of its underline
+h1 {
+  margin-bottom: 0;
+}
+
+// ---- Style links -----------------------------------------------------------
+a {
+  color: $secondaryColor;
+
+  &:hover {
+    color: $primaryDarkColor;
+    background: $secondaryColor;
+  }
+
+  &:visited {
+    color: $visitedLinkColor;
+
+    &:hover {
+      color: $primaryDarkColor;
+      background: $visitedLinkColor;
+    }
+  }
+}

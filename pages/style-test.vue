@@ -12,6 +12,10 @@
     <h5>Heading 5</h5>
     <h6>Heading 6</h6>
 
+    <h2>Links</h2>
+    <a href="https://awoireja89rtsetihw08hsts.local">Unvisited</a>
+    <a href="https://google.com">Visited</a>
+
     <h2>Lists</h2>
     <ul>
       <li>Unordered Item 1</li>
