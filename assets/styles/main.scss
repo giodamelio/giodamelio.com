@@ -7,6 +7,13 @@ body {
   color: $primaryTextColor;
 }
 
+// Main body width
+.container {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 // ---- Headings --------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
   font-size: 1rem; // Make all headings the same size
@@ -39,6 +46,29 @@ a {
     &:hover {
       color: $primaryDarkColor;
       background: $visitedLinkColor;
+    }
+  }
+}
+
+// ---- Navbar ----------------------------------------------------------------
+nav.topnav {
+  // Make the links always be the primary color
+  a {
+    color: $secondaryColor;
+
+    &:hover {
+      color: $primaryDarkColor;
+      background: $secondaryColor;
+    }
+  }
+
+  li {
+    list-style-type: none;
+    display: inline;
+
+    // Disable the counters from the markdown stylesheet
+    &:before {
+      content: '';
     }
   }
 }
