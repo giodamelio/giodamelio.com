@@ -1,0 +1,20 @@
+{
+  "name": "giodamelio.com",
+  "version": "1.0.0",
+  "description": "My personal website",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giodamelio/giodamelio.com.git"
+  },
+  "author": "Gio d'Amelio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/giodamelio/giodamelio.com/issues"
+  },
+  "homepage": "https://github.com/giodamelio/giodamelio.com#readme"
+}
