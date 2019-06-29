@@ -5,6 +5,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
+    "dev": "npx eleventy --serve --port 3141",
     "build": "eleventy",
     "format": "prettier --write --ignore-path .gitignore '**/*.{js,json,html}' !package.json !package-lock.json"
   },
