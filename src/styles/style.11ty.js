@@ -4,7 +4,7 @@ const path = require('path');
 const postcss = require('postcss');
 const functions = require('postcss-functions');
 
-const filename = 'markdown.css';
+const filename = 'style.css';
 
 const functionsOptions = {
   functions: {
