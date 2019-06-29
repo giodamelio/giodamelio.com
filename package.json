@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
-    "format": "prettier --write '**/*.{js,json}' !package.json !package-lock.json"
+    "format": "prettier --write '**/*.{js,json,html}' !package.json !package-lock.json"
   },
   "repository": {
     "type": "git",
