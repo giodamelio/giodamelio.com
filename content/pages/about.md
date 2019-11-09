@@ -1,5 +1,4 @@
 ---
-title: 'About'
+title: About
 ---
-
-This is my site.
+This is _my_ site!
