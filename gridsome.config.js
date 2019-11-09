@@ -6,5 +6,7 @@
 
 module.exports = {
   siteName: "Gio's site",
+  siteUrl: "https://giodamelio.com",
+  port: 3141,
   plugins: []
 };
