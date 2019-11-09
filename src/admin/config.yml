@@ -14,3 +14,14 @@ publish_mode: editorial_workflow
 # Setup media uploads
 media_folder: static/img
 public_folder: /img
+
+collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "About Page"
+        name: "about"
+        file: "content/pages/about.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Text, name: title, widget: markdown}
