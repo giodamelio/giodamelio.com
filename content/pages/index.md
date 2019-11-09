@@ -1,5 +1,5 @@
 ---
-title: 'Hello World!'
+title: Hello World!
 ---
 
-There is not much here right now, but you should come back every day and check!
+There is not much here right now, but _you_ **should** come back every day and check!
