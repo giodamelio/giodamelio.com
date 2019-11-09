@@ -24,4 +24,4 @@ collections:
         file: "content/pages/about.md"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Text, name: title, widget: markdown}
+          - {label: Body, name: body, widget: markdown}
