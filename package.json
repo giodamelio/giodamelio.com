@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "gridsome build",
-    "develop": "gridsome develop",
+    "develop": "gridsome develop --port 3141",
     "explore": "gridsome explore"
   },
   "dependencies": {
