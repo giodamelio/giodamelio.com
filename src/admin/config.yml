@@ -20,7 +20,7 @@ collections:
     name: "pages"
     files:
       - label: "Index Page"
-        name: "about"
+        name: "index"
         file: "content/pages/index.md"
         fields:
           - {label: Title, name: title, widget: string}
