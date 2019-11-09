@@ -1,14 +1,23 @@
 <template>
   <Layout>
-    <h1>Gio's site</h1>
-    <p>There is not much here right now, you should come back every day and check.</p>
+    <h1>{{$page.pages.title}}</h1>
+    <div v-html="$page.pages.content"></div>
   </Layout>
 </template>
+
+<page-query>
+query {
+  pages(path: "/content/pages/") {
+    title
+    content
+  }
+}
+</page-query>
 
 <script>
 export default {
   metaInfo: {
-    title: 'Gio\'s site'
+    title: ''
   }
 }
 </script>
