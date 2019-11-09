@@ -10,6 +10,13 @@ module.exports = {
   port: 3141,
   plugins: [
     {
+      use: "@gridsome/source-filesystem",
+      options: {
+        typeName: "Pages",
+        path: "./content/pages/*.md"
+      }
+    },
+    {
       use: "gridsome-plugin-netlify-cms"
     }
   ]
