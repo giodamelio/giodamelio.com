@@ -21,13 +21,13 @@ collections:
     files:
       - label: "Index Page"
         name: "index"
-        file: "content/pages/index.md"
+        file: "content/static-page/index.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
       - label: "About Page"
         name: "about"
-        file: "content/pages/about.md"
+        file: "content/static-page/about.md"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Body, name: body, widget: markdown}
