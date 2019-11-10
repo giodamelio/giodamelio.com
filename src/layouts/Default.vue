@@ -65,7 +65,7 @@ body {
 
   // Add a little margin on small screens
   @apply pl-2;
-  @screen md {
+  @screen xl {
     @apply pl-0;
   }
 
@@ -94,7 +94,7 @@ ul.navitems {
 
   // Add a little margin on small screens
   @apply px-2;
-  @screen md {
+  @screen xl {
     @apply px-0;
   }
 }
