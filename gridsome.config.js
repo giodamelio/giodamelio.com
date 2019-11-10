@@ -17,6 +17,9 @@ module.exports = {
       }
     },
     {
+      use: "gridsome-plugin-tailwindcss"
+    },
+    {
       use: "gridsome-plugin-netlify-cms"
     }
   ]
