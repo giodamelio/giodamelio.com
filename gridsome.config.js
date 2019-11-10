@@ -6,21 +6,21 @@
 
 module.exports = {
   siteName: "Gio's site",
-  siteUrl: "https://giodamelio.com",
+  siteUrl: 'https://giodamelio.com',
   port: 3141,
   plugins: [
     {
-      use: "@gridsome/source-filesystem",
+      use: '@gridsome/source-filesystem',
       options: {
-        typeName: "Pages",
-        path: "./content/pages/*.md"
+        typeName: 'Pages',
+        path: './content/pages/*.md'
       }
     },
     {
-      use: "gridsome-plugin-tailwindcss"
+      use: 'gridsome-plugin-tailwindcss'
     },
     {
-      use: "gridsome-plugin-netlify-cms"
+      use: 'gridsome-plugin-netlify-cms'
     }
   ]
 };

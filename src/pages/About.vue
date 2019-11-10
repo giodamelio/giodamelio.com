@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>{{$page.pages.title}}</h1>
+    <h1>{{ $page.pages.title }}</h1>
     <div v-html="$page.pages.content"></div>
   </Layout>
 </template>
@@ -19,5 +19,5 @@ export default {
   metaInfo: {
     title: 'About'
   }
-}
+};
 </script>

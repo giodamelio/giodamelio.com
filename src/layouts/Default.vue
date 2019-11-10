@@ -3,7 +3,14 @@
     <!-- Navbar -->
     <header class="bg-blue-500 text-white">
       <div class="container mx-auto py-2">
-        <g-link to="/" exact-active-class="nop" active-class="nop" exact class="text-2xl font-medium pr-3">{{ $static.metadata.siteName }}</g-link>
+        <g-link
+          to="/"
+          exact-active-class="nop"
+          active-class="nop"
+          exact
+          class="text-2xl font-medium pr-3"
+          >{{ $static.metadata.siteName }}</g-link
+        >
         <nav class="inline align-baseline">
           <ul class="navitems">
             <li>
@@ -20,7 +27,7 @@
 
     <!-- Main body -->
     <div class="container mx-auto mt-3">
-      <slot/>
+      <slot />
     </div>
   </div>
 </template>
