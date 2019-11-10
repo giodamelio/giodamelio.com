@@ -12,8 +12,8 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Pages',
-        path: './content/pages/*.md'
+        typeName: 'StaticPage',
+        path: './content/static-page/*.md'
       }
     },
     {

@@ -1,13 +1,13 @@
 <template>
   <Layout>
-    <h1>{{ $page.pages.title }}</h1>
-    <div v-html="$page.pages.content"></div>
+    <h1>{{ $page.staticPage.title }}</h1>
+    <div v-html="$page.staticPage.content"></div>
   </Layout>
 </template>
 
 <page-query>
 query {
-  pages(path: "/content/pages/about/") {
+  staticPage(path: "/content/static-page/about/") {
     title
     content
   }
