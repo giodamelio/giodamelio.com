@@ -30,4 +30,7 @@ collections:
         file: "content/static-page/about.md"
         fields:
           - {label: Title, name: title, widget: string}
+          - {label: Name, name: name, widget: string}
+          - {label: Path, name: path, widget: string}
+          - {label: Order, name: order, widget: number}
           - {label: Body, name: body, widget: markdown}
