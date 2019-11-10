@@ -54,7 +54,7 @@ query {
 <style lang="scss">
 body {
   @screen dark-mode {
-    @apply bg-blue-800 text-white;
+    @apply bg-green-800 text-white;
   }
 }
 </style>
@@ -70,9 +70,9 @@ body {
   }
 
   // Colors
-  @apply bg-blue-500 text-white;
+  @apply bg-green-500 text-white;
   @screen dark-mode {
-    @apply bg-blue-900;
+    @apply bg-green-900;
   }
 }
 
