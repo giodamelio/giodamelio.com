@@ -1,30 +1,40 @@
 <template>
   <div class="flex flex-col">
     <!-- Navbar -->
-    <header class="navbar">
-      <div class="container mx-auto py-2">
-        <!-- Site name -->
-        <g-link
-          to="/"
-          exact-active-class="nop"
-          active-class="nop"
-          exact
-          class="text-2xl font-medium pr-3"
-          >{{ $static.metadata.siteName }}</g-link
-        >
+    <header class="navbar container">
+      <!-- Site name -->
+      <g-link
+        to="/"
+        exact-active-class="nop"
+        active-class="nop"
+        exact
+        class="text-2xl font-medium flex-initial flex-shrink-0 flex-grow"
+        >{{ $static.metadata.siteName }}</g-link
+      >
 
-        <!-- Auto generate nav items from collection -->
-        <nav class="inline align-baseline">
-          <ul class="navitems">
-            <li
-              v-for="(page, index) in $static.navItems.edges"
-              :class="{ 'border-solid': true, 'border-l': index !== 0 }"
-            >
-              <g-link :to="page.node.path" exact>{{ page.node.title }}</g-link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <!-- Auto generate nav items from collection -->
+      <nav class="navitems order-last" :class="{ hidden: hamburgerHidden }">
+        <ul>
+          <g-link
+            v-for="(page, index) in $static.navItems.edges"
+            tag="li"
+            :key="index"
+            :to="page.node.path"
+            exact
+            >{{ page.node.title }}</g-link
+          >
+        </ul>
+      </nav>
+
+      <!-- Hamburger menu toggle -->
+      <a
+        class="pr-2 inline-block align-middle flex-none"
+        @click="hamburgerHidden = !hamburgerHidden"
+      >
+        <div class="hamburger-icon">
+          <div class="middle"></div>
+        </div>
+      </a>
     </header>
 
     <!-- Main body -->
@@ -33,6 +43,16 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      hamburgerHidden: true
+    };
+  }
+};
+</script>
 
 <static-query>
 query {
@@ -60,8 +80,11 @@ body {
 </style>
 
 <style lang="scss" scoped>
-.navbar {
-  @apply flex-initial;
+header.navbar {
+  @apply flex-initial mx-auto py-2;
+
+  // The navbars flexbox
+  @apply flex flex-row flex-wrap flex-wrap;
 
   // Add a little margin on small screens
   @apply pl-2;
@@ -76,17 +99,52 @@ body {
   }
 }
 
-ul.navitems {
-  @apply inline;
+nav.navitems {
+  @apply flex-initial flex-grow-0 flex-shrink-0;
 
-  li {
-    @apply inline px-1;
+  ul {
+    li {
+      @apply px-1 border-solid border-l text-lg;
+
+      &.active {
+        @apply border-l-4;
+      }
+      &:not(.active) {
+        @apply pl-2;
+      }
+    }
   }
 }
 
-.active {
-  /* TODO: Make an active style */
-  @apply underline;
+// Pure css hamburger menu
+div.hamburger-icon {
+  width: 1.5rem;
+
+  &:after,
+  &:before,
+  div.middle {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 4px 0;
+    transition: all 0.2s ease-in-out;
+
+    // Colors
+    @apply text-white bg-white;
+  }
+}
+
+div.hamburger-icon div {
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 4px;
+  margin: 7px 0;
+  transition: all 0.2s ease-in-out;
+
+  // Colors
+  @apply text-white bg-white;
 }
 
 .main-body {
