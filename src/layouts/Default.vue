@@ -18,7 +18,7 @@
           <ul class="navitems">
             <li
               v-for="(page, index) in $static.navItems.edges"
-              :class="{ 'border-solid': true, 'border-l-2': index !== 0 }"
+              :class="{ 'border-solid': true, 'border-l': index !== 0 }"
             >
               <g-link :to="page.node.path" exact class="nav-item">{{
                 page.node.title
