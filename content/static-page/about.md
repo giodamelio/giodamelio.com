@@ -1,7 +1,7 @@
 ---
-name: about
-order: 1
-path: '/about'
 title: About
+name: about
+path: /about
+order: 1
 ---
-This is _my_ site!
+This is _my_ site!!!
