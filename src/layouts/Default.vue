@@ -90,7 +90,7 @@ ul.navitems {
 }
 
 .main-body {
-  @apply mx-auto mt-3 flex-1;
+  @apply mx-auto pt-3 flex-1;
 
   // Add a little margin on small screens
   @apply px-2;
