@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="flex flex-col">
     <!-- Navbar -->
-    <header class="bg-blue-500 text-white">
+    <header class="flex-initial bg-blue-500 text-white">
       <div class="container mx-auto py-2">
         <!-- Site name -->
         <g-link
@@ -30,7 +30,7 @@
     </header>
 
     <!-- Main body -->
-    <div class="container mx-auto mt-3">
+    <div class="container mx-auto mt-3 flex-1">
       <slot />
     </div>
   </div>
