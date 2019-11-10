@@ -1,5 +1,7 @@
 ---
 name: index
+order: 0
+path: '/'
 title: Home
 ---
 

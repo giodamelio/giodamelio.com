@@ -7,7 +7,7 @@
 
 <page-query>
 query {
-  staticPage(path: "/content/static-page/about/") {
+  staticPage(path: "/about") {
     title
     content
   }

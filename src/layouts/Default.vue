@@ -3,6 +3,7 @@
     <!-- Navbar -->
     <header class="bg-blue-500 text-white">
       <div class="container mx-auto py-2">
+        <!-- Site name -->
         <g-link
           to="/"
           exact-active-class="nop"
@@ -11,14 +12,16 @@
           class="text-2xl font-medium pr-3"
           >{{ $static.metadata.siteName }}</g-link
         >
+
+        <!-- Auto generate nav items from collection -->
         <nav class="inline align-baseline">
           <ul class="navitems">
-            <li>
-              <g-link to="/" exact class="nav-item">Home</g-link>
-            </li>
-            <li>
-              <hr class="vertical" />
-              <g-link to="/about/" exact class="nav-item">About</g-link>
+            <li v-for="(page, index) in $static.navItems.edges">
+              <!-- Don't show the line for the first item -->
+              <hr v-if="index !== 0" class="vertical" />
+              <g-link :to="page.node.path" exact class="nav-item">{{
+                page.node.title
+              }}</g-link>
             </li>
           </ul>
         </nav>
@@ -36,6 +39,14 @@
 query {
   metadata {
     siteName
+  }
+  navItems: allStaticPage(sortBy: "order", order: ASC) {
+    edges {
+      node {
+        path
+        title
+      }
+    }
   }
 }
 </static-query>
