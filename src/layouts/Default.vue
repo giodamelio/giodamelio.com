@@ -28,7 +28,7 @@
     </header>
 
     <!-- Main body -->
-    <div class="container mx-auto mt-3 flex-1">
+    <div class="container main-body">
       <slot />
     </div>
   </div>
@@ -61,7 +61,16 @@ body {
 
 <style lang="scss" scoped>
 .navbar {
-  @apply flex-initial bg-blue-500 text-white;
+  @apply flex-initial;
+
+  // Add a little margin on small screens
+  @apply pl-2;
+  @screen md {
+    @apply pl-0;
+  }
+
+  // Colors
+  @apply bg-blue-500 text-white;
   @screen dark-mode {
     @apply bg-blue-900;
   }
@@ -78,5 +87,15 @@ ul.navitems {
 .active {
   /* TODO: Make an active style */
   @apply underline;
+}
+
+.main-body {
+  @apply mx-auto mt-3 flex-1;
+
+  // Add a little margin on small screens
+  @apply px-2;
+  @screen md {
+    @apply px-0;
+  }
 }
 </style>
