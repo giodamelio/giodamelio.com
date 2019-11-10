@@ -16,9 +16,10 @@
         <!-- Auto generate nav items from collection -->
         <nav class="inline align-baseline">
           <ul class="navitems">
-            <li v-for="(page, index) in $static.navItems.edges">
-              <!-- Don't show the line for the first item -->
-              <hr v-if="index !== 0" class="vertical" />
+            <li
+              v-for="(page, index) in $static.navItems.edges"
+              :class="{ 'border-solid': true, 'border-l-2': index !== 0 }"
+            >
               <g-link :to="page.node.path" exact class="nav-item">{{
                 page.node.title
               }}</g-link>
@@ -54,12 +55,6 @@ query {
 <style lang="scss" scoped>
 .nav-item {
   @apply px-1;
-}
-
-hr.vertical {
-  @apply inline border border-gray-400;
-  width: 1px;
-  height: 50%;
 }
 
 ul.navitems {
