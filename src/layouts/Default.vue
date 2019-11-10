@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col">
     <!-- Navbar -->
-    <header class="flex-initial bg-blue-500 text-white">
+    <header class="navbar">
       <div class="container mx-auto py-2">
         <!-- Site name -->
         <g-link
@@ -20,9 +20,7 @@
               v-for="(page, index) in $static.navItems.edges"
               :class="{ 'border-solid': true, 'border-l': index !== 0 }"
             >
-              <g-link :to="page.node.path" exact class="nav-item">{{
-                page.node.title
-              }}</g-link>
+              <g-link :to="page.node.path" exact>{{ page.node.title }}</g-link>
             </li>
           </ul>
         </nav>
@@ -52,16 +50,28 @@ query {
 }
 </static-query>
 
+<!-- Non scoped style to set some styles for the body -->
+<style lang="scss">
+body {
+  @screen dark-mode {
+    @apply bg-blue-800 text-white;
+  }
+}
+</style>
+
 <style lang="scss" scoped>
-.nav-item {
-  @apply px-1;
+.navbar {
+  @apply flex-initial bg-blue-500 text-white;
+  @screen dark-mode {
+    @apply bg-blue-900;
+  }
 }
 
 ul.navitems {
   @apply inline;
 
   li {
-    @apply inline;
+    @apply inline px-1;
   }
 }
 
