@@ -53,6 +53,22 @@ export default {
     return {
       hamburgerOpen: false
     };
+  },
+  methods: {
+    closeHamburgerIfOpen() {
+      console.log('HERE');
+      if (this.hamburgerOpen) {
+        this.hamburgerOpen = false;
+      }
+    }
+  },
+
+  // We have to do this hack to get click events from the entire document
+  mounted() {
+    document.addEventListener('click', this.closeHamburgerIfOpen);
+  },
+  beforeDestroy() {
+    document.removeEventListener('click', this.closeHamburgerIfOpen);
   }
 };
 </script>

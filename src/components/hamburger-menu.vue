@@ -1,5 +1,5 @@
 <template>
-  <a @click="clickEvent">
+  <a @click.stop="clickEvent">
     <div class="hamburger-icon" :class="{ open }">
       <div class="middle"></div>
     </div>
