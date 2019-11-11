@@ -1,38 +1,40 @@
 <template>
   <div class="flex flex-col">
     <!-- Navbar -->
-    <header class="navbar container">
-      <!-- Site name -->
-      <g-link
-        to="/"
-        exact-active-class="nop"
-        active-class="nop"
-        exact
-        class="text-2xl font-medium"
-      >
-        {{ $static.metadata.siteName }}
-      </g-link>
+    <header class="wrapper">
+      <div class="navbar container">
+        <!-- Site name -->
+        <g-link
+          to="/"
+          exact-active-class="nop"
+          active-class="nop"
+          exact
+          class="text-2xl font-medium"
+        >
+          {{ $static.metadata.siteName }}
+        </g-link>
 
-      <!-- Auto generate nav items from collection -->
-      <nav class="navitems" :class="{ hidden: !hamburgerOpen }">
-        <ul>
-          <g-link
-            v-for="(page, index) in $static.navItems.edges"
-            tag="li"
-            :key="index"
-            :to="page.node.path"
-            exact
-            >{{ page.node.title }}</g-link
-          >
-        </ul>
-      </nav>
+        <!-- Auto generate nav items from collection -->
+        <nav class="navitems" :class="{ hidden: !hamburgerOpen }">
+          <ul>
+            <g-link
+              v-for="(page, index) in $static.navItems.edges"
+              tag="li"
+              :key="index"
+              :to="page.node.path"
+              exact
+              >{{ page.node.title }}</g-link
+            >
+          </ul>
+        </nav>
 
-      <!-- Hamburger menu toggle -->
-      <HamburgerMenu
-        class="pr-2"
-        @click="hamburgerOpen = !hamburgerOpen"
-        :open="hamburgerOpen"
-      />
+        <!-- Hamburger menu toggle -->
+        <HamburgerMenu
+          class="hamburger-toggle pr-2"
+          @click="hamburgerOpen = !hamburgerOpen"
+          :open="hamburgerOpen"
+        />
+      </div>
     </header>
 
     <!-- Main body -->
@@ -98,7 +100,15 @@ body {
 </style>
 
 <style lang="scss" scoped>
-header.navbar {
+.wrapper {
+  // Colors
+  @apply bg-blue-500 text-white;
+  @screen dark-mode {
+    @apply bg-blue-900;
+  }
+}
+
+.navbar {
   @apply flex-initial mx-auto py-2;
 
   display: grid;
@@ -107,31 +117,60 @@ header.navbar {
 
   // Add a little margin on small screens
   @apply pl-2;
-  @screen xl {
-    @apply pl-0;
-  }
 
-  // Colors
-  @apply bg-blue-500 text-white;
-  @screen dark-mode {
-    @apply bg-blue-900;
+  // Styles for bigger screens
+  @screen md {
+    // Unset the left padding
+    @apply pl-0;
+
+    grid-template-columns: auto 1fr;
   }
 }
 
 nav.navitems {
   @apply order-last;
 
+  // Styles for bigger screens
+  @screen md {
+    // Make sure the items are left to right
+    @apply inline order-none;
+
+    // Add a bit of margin before the items
+    @apply ml-2;
+  }
+
   ul {
     li {
-      @apply px-1 border-solid border-l text-lg;
+      @apply px-1 border-solid border-l text-lg cursor-pointer;
 
+      // Apply the left borders to show the active page
       &.active {
         @apply border-l-4;
       }
-      &:not(.active) {
-        @apply pl-2;
+
+      // Put the nav items next to each other in the navbar on larger screens
+      @screen md {
+        // Show the nav items inline on larger screens
+        @apply inline;
+
+        // Put the active indicator on the bottom
+        &.active {
+          @apply border-b;
+        }
+        &:not(.active) {
+          @apply border-l-0;
+        }
+
+        // Remove all the left borders
+        @apply border-l-0 #{!important};
       }
     }
+  }
+}
+
+.hamburger-toggle {
+  @screen md {
+    @apply hidden;
   }
 }
 
