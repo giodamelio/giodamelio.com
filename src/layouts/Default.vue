@@ -8,18 +8,20 @@
         exact-active-class="nop"
         active-class="nop"
         exact
-        class="text-2xl font-medium flex-initial flex-shrink-0 flex-grow"
-        >{{ $static.metadata.siteName }}</g-link
+        class="brand text-2xl font-medium"
       >
+        {{ $static.metadata.siteName }}
+      </g-link>
 
       <!-- Auto generate nav items from collection -->
-      <nav class="navitems order-last" :class="{ hidden: hamburgerHidden }">
+      <nav class="navitems" :class="{ hidden: hamburgerHidden }">
         <ul>
           <g-link
             v-for="(page, index) in $static.navItems.edges"
             tag="li"
             :key="index"
             :to="page.node.path"
+            @click.native="hideHamburger()"
             exact
             >{{ page.node.title }}</g-link
           >
@@ -28,7 +30,7 @@
 
       <!-- Hamburger menu toggle -->
       <a
-        class="pr-2 inline-block align-middle flex-none"
+        class="hamburger-toggle pr-2"
         @click="hamburgerHidden = !hamburgerHidden"
       >
         <div class="hamburger-icon">
@@ -50,6 +52,12 @@ export default {
     return {
       hamburgerHidden: true
     };
+  },
+  methods: {
+    hideHamburger() {
+      console.log('Hello WOrld!');
+      this.hamburgerHidden = true;
+    }
   }
 };
 </script>
@@ -83,8 +91,9 @@ body {
 header.navbar {
   @apply flex-initial mx-auto py-2;
 
-  // The navbars flexbox
-  @apply flex flex-row flex-wrap flex-wrap;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 
   // Add a little margin on small screens
   @apply pl-2;
@@ -99,8 +108,11 @@ header.navbar {
   }
 }
 
+.brand {
+}
+
 nav.navitems {
-  @apply flex-initial flex-grow-0 flex-shrink-0;
+  @apply order-last;
 
   ul {
     li {
@@ -114,6 +126,10 @@ nav.navitems {
       }
     }
   }
+}
+
+.hamburger-toggle {
+  @apply align-middle;
 }
 
 // Pure css hamburger menu
