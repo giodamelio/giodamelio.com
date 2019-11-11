@@ -17,7 +17,13 @@ module.exports = {
       }
     },
     {
-      use: 'gridsome-plugin-tailwindcss'
+      use: 'gridsome-plugin-tailwindcss',
+      options: {
+        purgeConfig: {
+          // Manually list classes that Vue will add dynamically to stop PurgeCSS from removing them
+          whitelist: ['hidden']
+        }
+      }
     },
     {
       use: 'gridsome-plugin-netlify-cms'
