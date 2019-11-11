@@ -8,20 +8,19 @@
         exact-active-class="nop"
         active-class="nop"
         exact
-        class="brand text-2xl font-medium"
+        class="text-2xl font-medium"
       >
         {{ $static.metadata.siteName }}
       </g-link>
 
       <!-- Auto generate nav items from collection -->
-      <nav class="navitems" :class="{ hidden: hamburgerHidden }">
+      <nav class="navitems" :class="{ hidden: !hamburgerOpen }">
         <ul>
           <g-link
             v-for="(page, index) in $static.navItems.edges"
             tag="li"
             :key="index"
             :to="page.node.path"
-            @click.native="hideHamburger()"
             exact
             >{{ page.node.title }}</g-link
           >
@@ -29,14 +28,11 @@
       </nav>
 
       <!-- Hamburger menu toggle -->
-      <a
-        class="hamburger-toggle pr-2"
-        @click="hamburgerHidden = !hamburgerHidden"
-      >
-        <div class="hamburger-icon">
-          <div class="middle"></div>
-        </div>
-      </a>
+      <HamburgerMenu
+        class="pr-2"
+        @click="hamburgerOpen = !hamburgerOpen"
+        :open="hamburgerOpen"
+      />
     </header>
 
     <!-- Main body -->
@@ -47,17 +43,16 @@
 </template>
 
 <script>
+import HamburgerMenu from '~/components/hamburger-menu.vue';
+
 export default {
+  components: {
+    HamburgerMenu
+  },
   data() {
     return {
-      hamburgerHidden: true
+      hamburgerOpen: false
     };
-  },
-  methods: {
-    hideHamburger() {
-      console.log('Hello WOrld!');
-      this.hamburgerHidden = true;
-    }
   }
 };
 </script>
@@ -108,9 +103,6 @@ header.navbar {
   }
 }
 
-.brand {
-}
-
 nav.navitems {
   @apply order-last;
 
@@ -126,41 +118,6 @@ nav.navitems {
       }
     }
   }
-}
-
-.hamburger-toggle {
-  @apply align-middle;
-}
-
-// Pure css hamburger menu
-div.hamburger-icon {
-  width: 1.5rem;
-
-  &:after,
-  &:before,
-  div.middle {
-    border-radius: 3px;
-    content: '';
-    display: block;
-    height: 3px;
-    margin: 4px 0;
-    transition: all 0.2s ease-in-out;
-
-    // Colors
-    @apply text-white bg-white;
-  }
-}
-
-div.hamburger-icon div {
-  border-radius: 3px;
-  content: '';
-  display: block;
-  height: 4px;
-  margin: 7px 0;
-  transition: all 0.2s ease-in-out;
-
-  // Colors
-  @apply text-white bg-white;
 }
 
 .main-body {
