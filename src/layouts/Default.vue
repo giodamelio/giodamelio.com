@@ -56,7 +56,6 @@ export default {
   },
   methods: {
     closeHamburgerIfOpen() {
-      console.log('HERE');
       if (this.hamburgerOpen) {
         this.hamburgerOpen = false;
       }
