@@ -1,14 +1,17 @@
-# Default starter for Gridsome
+# My personal website
 
-This is the project you get when you run `gridsome create new-project`.
+This is the code for my [personal website](https://giodamelio.com).
 
-### 1. Install Gridsome CLI tool if you don't have
+## Running it locally
 
-`npm install --global @gridsome/cli`
+The site is build using [Gridsome](https://gridsome.org/). With a recentish version of Node installed it is easy to spin up the dev server or build a production dist.
 
-### 2. Create a Gridsome project
+```shell
+# Run the dev server
+npm install
+npm run develop
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+# Build a production deploy to `build/`
+npm install
+npm run build
+```
