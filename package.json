@@ -1,23 +1,23 @@
 {
   "name": "giodamelio.com",
+  "version": "1.0.0",
+  "description": "The source of giodamelio.com",
   "private": true,
+  "main": "index.js",
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore",
-    "format": "prettier --write 'src/**/*.{js,vue}' '*.{js,json}'"
+    "build": "npx @11ty/eleventy"
   },
-  "dependencies": {
-    "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.4.0",
-    "gridsome": "^0.7.0",
-    "gridsome-plugin-netlify-cms": "^1.0.9",
-    "gridsome-plugin-tailwindcss": "^2.2.27",
-    "netlify-cms": "^2.9.7",
-    "node-sass": "^4.13.0",
-    "sass-loader": "^7.3.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giodamelio/giodamelio.com.git"
   },
+  "author": "Gio d'Amelio",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giodamelio/giodamelio.com/issues"
+  },
+  "homepage": "https://github.com/giodamelio/giodamelio.com#readme",
   "devDependencies": {
-    "prettier": "^1.19.1"
+    "@11ty/eleventy": "^0.10.0"
   }
 }
