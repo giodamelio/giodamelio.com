@@ -5,7 +5,8 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy"
+    "build": "eleventy",
+    "dev": "eleventy --serve --port 3141"
   },
   "repository": {
     "type": "git",
