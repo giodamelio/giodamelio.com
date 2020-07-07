@@ -25,10 +25,10 @@
           {% for item in config.extra.menu %} 
           <li>
             <a href="{{ item.href }}">{{ item.text }}</a>
-            {% if not loop.last %}
-            -
-            {% endif %}
           </li>
+          {% if not loop.last %}
+          - 
+          {% endif %}
           {% endfor %}
         </ul>
       </nav>
