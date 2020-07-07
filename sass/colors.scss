@@ -1,0 +1,13 @@
+// Default dark colorscheme
+:root {
+  --color-text: white;
+  --color-background: #24476b;
+}
+
+// Light colorsheme if the user prefers it
+@media screen and (prefers-color-scheme: light) {
+  :root {
+    --color-text: black;
+    --color-background: white;
+  }
+}
