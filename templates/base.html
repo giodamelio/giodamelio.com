@@ -16,9 +16,24 @@
     {% endblock head %}
   </head>
   <body>
-    <div class="container">
+    <header class="container">
+      <nav>
+        <ul>
+          {% for item in config.extra.menu %} 
+          <li>
+            <a href="{{ item.href }}">{{ item.text }}</a>
+            {% if not loop.last %}
+            -
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
       {% block content %}
       {% endblock content %}
-    </div>
+    </main>
   </body>
 </html>

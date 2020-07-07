@@ -1,6 +1,25 @@
-body {
-  background: var(--color-background);
-  color: var(--color-text);
+// Top menu
+header nav {
+  ul {
+    // Remove the bullet points
+    list-style-type: none;
+
+    // Make the list items aren't indented
+    padding-left: 0;
+
+    li {
+      // Stop the hardbreaks between items
+      display: inline;
+
+      a {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+// Main content
+main {
 }
 
 .container {

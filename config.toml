@@ -15,3 +15,8 @@ title = "Gio's Site"
 
 [extra]
 # Put all your custom variables here
+menu = [
+  { text = "Gio d'Amelio", href = "https://giodamelio.com" },
+  { text = "Blog", href = "https://giodamelio.com/blog" },
+  { text = "Test", href = "https://google.com" },
+]

@@ -2,6 +2,7 @@
 :root {
   --color-text: white;
   --color-background: #24476b;
+  --color-link: #c65861;
 }
 
 // Light colorsheme if the user prefers it
@@ -9,5 +10,20 @@
   :root {
     --color-text: black;
     --color-background: white;
+    --color-link: #c65861;
   }
+}
+
+// Color all the things
+body {
+  background: var(--color-background);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-link);
+
+  // Make the line under the link a little further away
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-link);
 }
