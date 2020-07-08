@@ -18,8 +18,17 @@ header nav {
   }
 }
 
-pre {
+// The styles for the fancy JSON Schema on the homepage
+.json-schema {
   font-size: 1.2rem;
+  background-color: var(--color-json-schema-background);
+  color: #a3be8c;
+
+  a {
+    color: var(--color-text);
+    text-decoration: underline;
+    border-bottom: none;
+  }
 }
 
 .container {
