@@ -1,9 +1,6 @@
 [build]
-publish = ""
-command = ""
-
-[build.environment]
-# Set the version name that you want to use and Netlify will automatically use it.
+publish = "dist/"
+command = "npm run build"
 
 # The magic for deploying previews of branches.
 # We need to override the base url with whatever url Netlify assigns to our
