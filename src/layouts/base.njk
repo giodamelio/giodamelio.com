@@ -7,16 +7,42 @@
 
   <link
     rel="stylesheet"
-    href="https://unpkg.com/purecss@2.0.6/build/pure-min.css"
-    integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" 
+    href="https://unpkg.com/frow@3.3.2/dist/frow.css"
+    integrity="sha384-5494DXpzuZuX2kZKZpptpJ/QzH3CO3YJjLYwZBbgCojWh4Y8GdLUFPxrlL8JZhAh"
     crossorigin="anonymous"
   >
 
   {% linkStylesheet "static/css/main.css" %}
 
-  <title>Document</title>
+  <title>{{ title }} | Gio's Site</title>
 </head>
 <body>
-{{ content | safe }}
+  <header>
+    <nav class="frow frow-container">
+      <ul class="col-md-1-2 nav-site">
+        <li><a href="/">Gio d'Amelio</a></li>
+        <li>- <a href="/blog">Blog</a></li>
+        <li>- <a href="/resume">Resume</a></li>
+      </ul>
+      <ul class="col-md-1-2 nav-social">
+        <li><a href="https://github.com/giodamelio" rel="noopener noreferrer nofollow">Github</a></li>
+        <li>- <a href="https://www.linkedin.com/in/giodamelio/" rel="noopener noreferrer nofollow">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="frow-container">
+    <hr />
+  </div>
+
+  <main class="frow frow-container">
+    <div class="col-md-1-1">
+      {{ content | safe }}
+    </div>
+  </main>
+
+  <footer class="frow-container text-center">
+    &copy; 2021 Gio d'Amelio
+  </footer>
 </body>
 </html>

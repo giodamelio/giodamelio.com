@@ -1,0 +1,50 @@
+/* Make the set size of elements include the padding */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Make the page font be monospace */
+body {
+  font-family: Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;
+}
+
+/* Make links underlined */
+a {
+  text-decoration: underline;
+}
+
+/*** Navbar ***/
+nav {
+  max-width: 960px;
+  margin: auto;
+  /* Pad the left and right sides */
+  padding: 0 1em 0 1em; 
+}
+
+nav ul {
+  padding: 0;
+  margin-bottom: 4px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+/* On larger screens make the social nav items go to the right */
+@media (min-width: 992px) {
+  .nav-social {
+    text-align: right;
+  }
+}
+
+/* On smaller screens remove some margin for when the social nav wraps to the next line */
+@media (max-width: 991px) {
+  .nav-social {
+    margin-top: 4px;
+  }
+}
+
+/*** Main content ***/
