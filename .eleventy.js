@@ -25,6 +25,11 @@ module.exports = function (eleventyConfig) {
   >`;
   });
 
+  // Add some global data
+  eleventyConfig.addGlobalData('currentYear', () => {
+    return new Date().getFullYear();
+  })
+
   return {
     dir: {
       input: 'src/',
