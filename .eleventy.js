@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addNunjucksShortcode('linkStylesheet', function (path) {
     return `<link
     rel="stylesheet"
-    href="${path}"
+    href="/${path}"
     integrity="${genSubresourceIntegrityHash('src/' + path)}"
     crossorigin="anonymous"
   >`;
