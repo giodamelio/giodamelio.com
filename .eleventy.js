@@ -29,6 +29,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData('currentYear', () => {
     return new Date().getFullYear();
   })
+  eleventyConfig.addGlobalData('generationTime', () => {
+    return new Date().toISOString();
+  })
 
   return {
     dir: {
