@@ -1,6 +1,8 @@
 const fs = require('fs');
 const crypto = require('crypto');
 
+const pluginRss = require("@11ty/eleventy-plugin-rss");
+
 // Calculate the subresrouce integrity of a file
 // Would have done it the streaming way, but not sure if Eleventy shortcodes work with async code
 function genSubresourceIntegrityHash(path) {
@@ -37,6 +39,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData('generationTime', () => {
     return new Date().toISOString();
   })
+
+  // Generate an RSS feed
+  eleventyConfig.addPlugin(pluginRss);
 
   return {
     dir: {
