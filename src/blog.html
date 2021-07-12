@@ -12,7 +12,7 @@ title: Blog
 <ol>
 {% for post in collections.posts %}
   <li>
-    <span title="{{ post.data.published_at }}">{{ post.data.published_at | formatDate }}</span> - 
+    <span title="{{ post.data.date }}">{{ post.data.date | formatDate }}</span> - 
     <a href="{{ post.data.page.url | url }}">{{ post.data.title }}</a>
   </li>
 {% endfor %}
