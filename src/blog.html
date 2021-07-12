@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: Blog
+---
+
+<h1>Blog</h1>
+
+<p>Here are my blog posts on random (though mostly technological) topics.</p>
+
+<h2>Posts</h2>
+
+<ol>
+{% for post in collections.posts %}
+  <li>
+    <span title="{{ post.data.published_at }}">{{ post.data.published_at | formatDate }}</span> - 
+    <a href="{{ post.data.page.url | url }}">{{ post.data.title }}</a>
+  </li>
+{% endfor %}
+</ol>

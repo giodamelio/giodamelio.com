@@ -25,6 +25,11 @@ module.exports = function (eleventyConfig) {
   >`;
   });
 
+  // Format dates like I want
+  eleventyConfig.addFilter('formatDate', function (date) {
+    return new Date(date).toISOString().split('T')[0];
+  });
+
   // Add some global data
   eleventyConfig.addGlobalData('currentYear', () => {
     return new Date().getFullYear();
