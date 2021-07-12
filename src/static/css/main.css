@@ -25,6 +25,9 @@ a {
 a:hover {
   color: var(--hover-color);
 }
+a:visited {
+  color: var(--hover-color);
+}
 
 /*** Navbar ***/
 nav {
