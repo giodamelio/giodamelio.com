@@ -1,3 +1,18 @@
+---
+nav:
+  site:
+    - name: Gio d'Amelio
+      href: /
+    - name: Blog
+      href: /blog
+    - name: Resume
+      href: /resume
+  social:
+    - name: Github
+      href: https://github.com/giodamelio
+    - name: LinkedIn
+      href: https://www.linkedin.com/in/giodamelio/
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,13 +35,20 @@
   <header>
     <nav class="frow frow-container">
       <ul class="col-md-1-2 nav-site">
-        <li><a href="/">Gio d'Amelio</a></li>
-        <li>- <a href="/blog">Blog</a></li>
-        <li>- <a href="/resume">Resume</a></li>
+        {% for item in nav.site %}
+        <li>
+          <a href="{{ item.href }}">{{ item.name }}</a>
+          {% if not loop.last %} -{% endif %}
+        </li>
+        {% endfor %}
       </ul>
       <ul class="col-md-1-2 nav-social">
-        <li><a href="https://github.com/giodamelio" rel="noopener noreferrer nofollow">Github</a></li>
-        <li>- <a href="https://www.linkedin.com/in/giodamelio/" rel="noopener noreferrer nofollow">LinkedIn</a></li>
+        {% for item in nav.social %}
+        <li>
+          <a href="{{ item.href }}" rel="noopener noreferrer nofollow">{{ item.name }}</a>
+          {% if not loop.last %} -{% endif %}
+        </li>
+        {% endfor %}
       </ul>
     </nav>
   </header>
