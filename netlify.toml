@@ -1,6 +1,6 @@
 [build]
-publish = "dist/"
-command = "npm run build"
+publish = ""
+command = ""
 
 # The magic for deploying previews of branches.
 # We need to override the base url with whatever url Netlify assigns to our
