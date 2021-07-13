@@ -7,3 +7,5 @@ date: 2021-07-12
 # This is just a test
 
 Please ignore this.
+
+[Contact me!](/contact)
