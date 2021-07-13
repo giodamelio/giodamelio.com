@@ -1,26 +1,25 @@
 const { Feed } = require('feed');
-// const feed = require('./feed.js');
 
-const feed = new Feed({
-  title: 'Gio\'s Blog',
-  description: 'Here are my blog posts on random (though mostly technological) topics.',
-  id: 'https://giodamelio.com/blog/',
-  link: 'https://giodamelio.com/blog/',
-  // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
-  language: 'en',
-  feedLinks: {
-    json: 'https://giodamelio.com/blog/feed.json',
-    atom: 'https://giodamelio.com/blog/feed.atom',
-    rss: 'https://giodamelio.com/blog/feed.rss',
-  },
-  author: {
-    name: 'Gio d\'Amelio',
-    email: 'giodamelio@gmail.com',
-    link: 'https://giodamelio.com'
-  }
-});
+function buildFeed(data, _extension) {
+  const feed = new Feed({
+    title: 'Gio\'s Blog',
+    description: 'Here are my blog posts on random (though mostly technological) topics.',
+    id: 'https://giodamelio.com/blog/',
+    link: 'https://giodamelio.com/blog/',
+    // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+    language: 'en',
+    feedLinks: {
+      json: 'https://giodamelio.com/blog/feed.json',
+      atom: 'https://giodamelio.com/blog/feed.atom',
+      rss: 'https://giodamelio.com/blog/feed.rss',
+    },
+    author: {
+      name: 'Gio d\'Amelio',
+      email: 'giodamelio@gmail.com',
+      link: 'https://giodamelio.com'
+    }
+  });
 
-function buildFeed(data) {
   data.collections.posts.forEach(post => {
     feed.addItem({
       title: post.data.title,
@@ -59,8 +58,8 @@ module.exports = class {
   }
 
   render(data) {
-    const feed = buildFeed.apply(this, [data]);
-    const func = data.pagination.items[0].func;
+    const { extension, func } = data.pagination.items[0];
+    const feed = buildFeed.apply(this, [data, extension]);
     return feed[func]();
   }
 }
