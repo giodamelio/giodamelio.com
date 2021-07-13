@@ -4,14 +4,14 @@ function buildFeed(data, _extension) {
   const feed = new Feed({
     title: 'Gio\'s Blog',
     description: 'Here are my blog posts on random (though mostly technological) topics.',
-    id: 'https://giodamelio.com/blog/',
-    link: 'https://giodamelio.com/blog/',
+    id: `${data.baseUrl}/blog/`,
+    link: `${data.baseUrl}/blog/`,
     // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
     language: 'en',
     feedLinks: {
-      json: 'https://giodamelio.com/blog/feed.json',
-      atom: 'https://giodamelio.com/blog/feed.atom',
-      rss: 'https://giodamelio.com/blog/feed.rss',
+      json: `${data.baseUrl}/blog/feed.json`,
+      atom: `${data.baseUrl}/blog/feed.atom`,
+      rss: `${data.baseUrl}/blog/feed.rss`,
     },
     author: {
       name: 'Gio d\'Amelio',
@@ -23,8 +23,8 @@ function buildFeed(data, _extension) {
   data.collections.posts.forEach(post => {
     feed.addItem({
       title: post.data.title,
-      id: post.url,
-      link: this.url(post.url),
+      id: `${data.baseUrl}/blog${this.url(post.url)}`,
+      link: `${data.baseUrl}/blog${this.url(post.url)}`,
       date: post.data.date,
       content: post.templateContent,
       author: [

@@ -40,6 +40,9 @@ module.exports = function (eleventyConfig) {
     return new Date().toISOString();
   })
 
+  // Set the baseurl from the env or the default
+  eleventyConfig.addGlobalData('baseUrl', process.env.DEPLOY_PRIME_URL || "https://giodamelio.com")
+
   // Generate an RSS feed
   eleventyConfig.addPlugin(pluginRss);
 
