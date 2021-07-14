@@ -54,13 +54,13 @@
     </div>
   </main>
 
-  {# <footer class="frow-container text-center">
+  <footer class="frow-container text-center">
     <p>
-      &copy; {{ currentYear }} Gio d'Amelio
+      &copy; {{ now() | date(format="%Y") }} Gio d'Amelio
     </p>
     <p>
-      Generated at {{ generationTime }} using <a href="https://www.getzola.org">Zola</a> (<a href="https://github.com/giodamelio/giodamelio.com">Site Source Code</a>)
+      Generated on <span title="{{ now() }}">{{ now() | date }}</span> using <a href="https://www.getzola.org">Zola</a> (<a href="https://github.com/giodamelio/giodamelio.com">Site Source Code</a>)
     </p>
-  </footer> #}
+  </footer>
 </body>
 </html>
