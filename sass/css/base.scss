@@ -17,13 +17,9 @@ a {
 
 //// Navbar ////
 nav {
-  max-width: 960px;
-  margin: auto;
-  padding: 0 1em 0 1em;  // Pad left and right sides
-
   ul {
     padding: 0;
-    margin-bottom: 4px;
+    margin-bottom: 0;
 
     li {
       display: inline;
@@ -38,14 +34,14 @@ nav {
 
 // On larger screens make the social nav items go to the right
 @media (min-width: 992px) {
-  .nav-social {
+  .nav-social, .footer-source {
     text-align: right;
   }
 }
 
 // On smaller screens remove some margin for when the social nav wraps to the next line
 @media (max-width: 991px) {
-  .nav-social {
+  .nav-social, .footer-source {
     margin-top: 4px;
   }
 }
