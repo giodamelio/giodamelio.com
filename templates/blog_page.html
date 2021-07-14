@@ -1,11 +1,28 @@
 {% extends "base.html" %}
 
 {% block title %}
-<title>{{ title | default(value = "")}} | Gio's Site</title>
+<title>{% if page.title %}{{ page.title }} |{% endif %} Gio's Site</title>
 {% endblock title %}
 
+{% block head %}
+  <link
+    rel="stylesheet"
+    href="{{ get_url(path='/css/blog_page.css') }}"
+  >
+{% endblock head %}
+
 {% block content %}
-<pre>
-{{ page | json_encode(pretty=true) }}
-</pre>
+<h1>{{ page.title }}</h1>
+
+<div class="published_date">{{ page.date }}</div>
+
+<ul class="tags">
+  {% for tag in page.taxonomies.tags %}
+  <li>
+    <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}">#{{ tag }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{{ page.content | safe }}
 {% endblock content %}
