@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>{% if page.title %}{{ page.title }} |{% endif %} Gio's Site</title>
+{% endblock title %}
+
+{% block content %}
+{{ page.content | safe }}
+{% endblock content %}
