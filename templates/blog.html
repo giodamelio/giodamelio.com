@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>{{ section.title | default(value = "")}} | Gio's Site</title>
+{% endblock title %}
+
+{% block content %}
+{{ section.content | safe }}
+
+<h2>Posts:</h2>
+<ul>
+{% for post in section.pages %}
+<li>
+{{ post.date }} - <a href="{{ get_url(path=post.path) }}"> {{ post.title }}</a>
+</li>
+{% endfor %}
+</ul>
+{% endblock content %}

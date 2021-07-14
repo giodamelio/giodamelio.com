@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>{{ title | default(value = "")}} | Gio's Site</title>
+{% endblock title %}
+
+{% block content %}
+<pre>
+{{ page | json_encode(pretty=true) }}
+</pre>
+{% endblock content %}
