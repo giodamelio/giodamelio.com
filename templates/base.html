@@ -25,7 +25,7 @@
       <ul class="col-md-1-2 nav-site">
         {% for item in config.extra.nav.site %}
         <li>
-          <a href="{{ item.url }}">{{ item.text }}</a>
+          <a href="{{ get_url(path=item.url) }}">{{ item.text }}</a>
           {% if not loop.last %} |{% endif %}
         </li>
         {% endfor %}
@@ -33,7 +33,7 @@
       <ul class="col-md-1-2 nav-social">
         {% for item in config.extra.nav.social %}
         <li>
-          <a href="{{ item.url }}" rel="noopener noreferrer nofollow">{{ item.text }}</a>
+          <a href="{{ get_url(path=item.url) }}" rel="noopener noreferrer nofollow">{{ item.text }}</a>
           {% if not loop.last %} |{% endif %}
         </li>
         {% endfor %}
