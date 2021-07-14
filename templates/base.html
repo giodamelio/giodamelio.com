@@ -10,6 +10,10 @@
     rel="stylesheet"
     href="{{ get_url(path='/css/vendor/frow-3.3.1/frow.css') }}"
   >
+  <link
+    rel="stylesheet"
+    href="{{ get_url(path='/css/base.css') }}"
+  >
 
   {% block title %}
   <title>Gio's Site</title>
@@ -17,28 +21,28 @@
 </head>
 <body>
   <header>
-    {# <nav class="frow frow-container">
+    <nav class="frow frow-container">
       <ul class="col-md-1-2 nav-site">
-        {% for item in nav.site %}
+        {% for item in config.extra.nav.site %}
         <li>
-          <a href="{{ item.href }}">{{ item.name }}</a>
-          {% if not loop.last %} -{% endif %}
+          <a href="{{ item.url }}">{{ item.text }}</a>
+          {% if not loop.last %} |{% endif %}
         </li>
         {% endfor %}
       </ul>
       <ul class="col-md-1-2 nav-social">
-        {% for item in nav.social %}
+        {% for item in config.extra.nav.social %}
         <li>
-          <a href="{{ item.href }}" rel="noopener noreferrer nofollow">{{ item.name }}</a>
-          {% if not loop.last %} -{% endif %}
+          <a href="{{ item.url }}" rel="noopener noreferrer nofollow">{{ item.text }}</a>
+          {% if not loop.last %} |{% endif %}
         </li>
         {% endfor %}
       </ul>
-    </nav> #}
+    </nav>
   </header>
 
   <div class="frow-container">
-    <hr />
+    <div class="divider"></div>
   </div>
 
   <main class="frow frow-container">
@@ -46,6 +50,10 @@
       {% block content %}{% endblock %}
     </div>
   </main>
+
+  <div class="frow-container">
+    <div class="divider"></div>
+  </div>
 
   <footer class="frow-container text-center">
     <p>

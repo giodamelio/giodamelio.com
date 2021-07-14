@@ -14,3 +14,11 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
+
+[extra.nav]
+site = [{ text = "Gio d'Amelio", url = "/" },
+        { text = "Blog", url = "/blog" },
+        { text = "Resume", url = "/resume" },
+        { text = "Contact", url = "/contact" }]
+social = [{ text = "Github", url = "https://github.com/giodamelio" },
+          { text = "LinkedIn", url = "https://www.linkedin.com/in/giodamelio/" }]
