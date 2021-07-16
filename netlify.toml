@@ -15,3 +15,7 @@ command = "zola build --base-url $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
 command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+# Check for broken links
+[[plugins]]
+package = "netlify-plugin-checklinks"
