@@ -4,6 +4,8 @@
 ARG VARIANT="buster"
 FROM mcr.microsoft.com/vscode/devcontainers/rust:0-${VARIANT}
 
-# [Optional] Uncomment this section to install additional packages.
-# RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-#     && apt-get -y install --no-install-recommends <your-package-list-here>
+# Install Zola
+ARG zola_version=v0.15.3
+RUN curl -LO https://github.com/getzola/zola/releases/download/${zola_version}/zola-${zola_version}-x86_64-unknown-linux-gnu.tar.gz \
+  && tar xzfv zola-${zola_version}-x86_64-unknown-linux-gnu.tar.gz \
+  && mv zola /usr/local/bin/
