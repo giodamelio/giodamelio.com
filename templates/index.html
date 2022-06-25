@@ -5,11 +5,11 @@
 {% endblock title %}
 
 {% block content %}
-<div>
+<div class="flex flex-row flex-wrap gap-x-4">
   <div>
-    <img src="{{ get_url(path='/images/face.jpg') }}" alt="A picture of Gio">
+    <img class="w-96" src="{{ get_url(path='/images/face.jpg') }}" alt="A picture of Gio">
   </div>
-  <div>
+  <div class="prose prose-li:my-0 prose-p:-mb-0 prose-h2:mt-4 prose-h1:mb-1">
     {{ section.content | safe }}
   </div>
 </div>

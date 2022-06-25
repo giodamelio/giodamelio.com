@@ -20,12 +20,12 @@
   {% endblock title %}
 </head>
 
-<body>
-  <header>
-    <nav>
+<body class="container mx-auto px-2 flex flex-col h-screen">
+  <header class="mb-2">
+    <nav class="flex flex-row flex-wrap justify-between">
       <ul>
         {% for item in config.extra.nav.site %}
-        <li>
+        <li class="inline-block">
           <a href="{{ get_url(path=item.url) }}">{{ item.text }}</a>
           {% if not loop.last %} |{% endif %}
         </li>
@@ -33,7 +33,7 @@
       </ul>
       <ul>
         {% for item in config.extra.nav.social %}
-        <li>
+        <li class="inline-block">
           <a href="{{ item.url }}" rel="noopener noreferrer nofollow">{{ item.text }}</a>
           {% if not loop.last %} |{% endif %}
         </li>
@@ -42,21 +42,11 @@
     </nav>
   </header>
 
-  <div>
-    <div></div>
-  </div>
-
-  <main>
-    <div>
-      {% block content %}{% endblock %}
-    </div>
+  <main class="grow">
+    {% block content %}{% endblock %}
   </main>
 
-  <div>
-    <div></div>
-  </div>
-
-  <footer>
+  <footer class="flex flex-row flex-wrap justify-between my-2">
     <div>
       &copy; {{ now() | date(format="%Y") }} Gio d'Amelio
     </div>

@@ -2,7 +2,7 @@
 title = "Home"
 +++
 
-# Gio d'Amelio
+# Giovanni d'Amelio
 
 Full Stack Software Developer
 
