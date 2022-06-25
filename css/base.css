@@ -5,3 +5,7 @@
 a {
   @apply underline
 }
+
+.my-prose {
+  @apply prose prose-li:my-0 prose-p:mb-0 prose-h2:mt-6 prose-h1:mb-1;
+}
