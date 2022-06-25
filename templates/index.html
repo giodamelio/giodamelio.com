@@ -5,15 +5,11 @@
 {% endblock title %}
 
 {% block content %}
-<div class="frow frow-container px-0">
-  <div class="col-md-1-3 pr-5">
-    <img
-      src="{{ get_url(path='/images/face.jpg') }}"
-      alt="A picture of Gio"
-      class="width-100"
-    >
+<div>
+  <div>
+    <img src="{{ get_url(path='/images/face.jpg') }}" alt="A picture of Gio">
   </div>
-  <div class="col-md-2-3">
+  <div>
     {{ section.content | safe }}
   </div>
 </div>

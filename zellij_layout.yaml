@@ -1,0 +1,12 @@
+---
+tabs:
+  - direction: Vertical
+    parts:
+      - run:
+          command:
+            cmd: just
+            args: [zola]
+      - run:
+          command:
+            cmd: just
+            args: [tailwind]
