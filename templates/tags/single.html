@@ -5,13 +5,15 @@
 {% endblock title %}}
 
 {% block content %}
-<h2>Posts with the tag "{{ term.name }}"</h2>
+<div class="my-prose">
+  <h1>Posts with the tag <span class="tag">{{ term.name }}</span></h1>
 
-<ul>
-{% for post in term.pages %}
-  <li>
-    {{ post.date }} - <a href="{{ get_url(path=post.path) }}"> {{ post.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+  <ul>
+    {% for post in term.pages %}
+    <li>
+      {{ post.date }} - <a href="{{ get_url(path=post.path) }}"> {{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 {% endblock content %}
