@@ -4,6 +4,10 @@
 <title>{{ section.title | default(value = "")}} | Gio's Site</title>
 {% endblock title %}
 
+{% block head %}
+<link rel="alternate" type="application/atom+xml" href="{{ get_url(path='/blog/atom.xml', trailing_slash=false) }}">
+{% endblock head %}
+
 {% block content %}
 <div class="my-prose">
   {{ section.content | safe }}
