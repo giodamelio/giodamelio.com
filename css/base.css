@@ -7,5 +7,9 @@ a {
 }
 
 .my-prose {
-  @apply prose prose-li:my-0 prose-p:mb-0 prose-h2:mt-6 prose-h1:mb-1;
+  @apply prose prose-li:my-1 prose-p:mb-0 prose-h2:mt-6 prose-h1:mb-2;
+}
+
+.tag {
+  @apply bg-slate-300 p-1 bg-clip-padding rounded before:content-['#'];
 }

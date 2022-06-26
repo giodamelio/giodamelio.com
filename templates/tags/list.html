@@ -5,13 +5,15 @@
 {% endblock title %}
 
 {% block content %}
-<h2>Tags</h2>
+<div class="my-prose">
+  <h1>Tags</h1>
 
-<ul>
-{% for tag in terms %}
-  <li>
-    <a href="{{ tag.permalink }}">{{ tag.name }}</a>
-  </li>  
-{% endfor %}
-</ul>
+  <ul>
+    {% for tag in terms %}
+    <li>
+      <a class="tag" href="{{ tag.permalink }}">{{ tag.name }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
 {% endblock content %}
