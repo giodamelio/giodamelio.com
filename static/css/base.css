@@ -606,10 +606,6 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -620,10 +616,6 @@ video {
 
 .inline-block {
   display: inline-block;
-}
-
-.inline {
-  display: inline;
 }
 
 .flex {
@@ -1079,6 +1071,10 @@ a {
 
 .my-prose > :where(:last-child):not(:where([class~="not-prose"] *)) {
   margin-bottom: 0;
+}
+
+.my-prose {
+  max-width: none;
 }
 
 .my-prose :is(:where(h1):not(:where([class~="not-prose"] *))) {

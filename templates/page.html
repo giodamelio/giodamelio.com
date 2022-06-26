@@ -5,5 +5,7 @@
 {% endblock title %}
 
 {% block content %}
-{{ page.content | safe }}
+<div class="my-prose">
+  {{ page.content | safe }}
+</div>
 {% endblock content %}
