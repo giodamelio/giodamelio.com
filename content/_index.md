@@ -4,7 +4,7 @@ title = "Home"
 
 # Giovanni d'Amelio
 
-Full Stack Software Developer
+Software Developer
 
 ## Quick Links
 
