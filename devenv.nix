@@ -5,5 +5,7 @@
 
   packages = with pkgs; [
     zola
+    emmet-ls
+    vscode-langservers-extracted
   ];
 }
