@@ -1,10 +1,6 @@
 +++
 title = "NixOS Configs"
 description = "The NixOS configs tht configure all my computers"
-weight = 1
-
-[extra]
-local_image = "projects/nixos.svg"
 +++
 
 A set of NixOS configs that declaritivly configure all my machines.

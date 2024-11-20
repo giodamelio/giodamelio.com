@@ -1,12 +1,8 @@
 +++
 title = "Home"
-template = "index.html"
-
-[extra]
-header = {title = "Hello! I'm Gio", img = "img/face.jpeg", img_alt = "Giovanni d'Amelio's face" }
 +++
 
-I'm a programmer of things, lover of tinkering and learner of weird facts. always tinkering on some random project.
+I'm a programmer of things, lover of tinkering and learner of weird facts. I am always tinkering on some random project.
 
 ## Projects
 

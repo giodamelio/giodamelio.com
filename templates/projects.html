@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block main %}
+{% set projects = get_section(path="projects/_index.md", metadata_only=true) %}
+<main>
+  {{ section.content | safe }}
+
+  <ol>
+  {% for page in section.pages %}
+    <li>{{page.title}}: {{page.description}} <a href="{{page.permalink}}">More details</a></li>
+  {% endfor %}
+  </ol>
+</main>
+{% endblock %}

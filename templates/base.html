@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value=" en-US" ) }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{%- block title %}{{ config.title }}{%- endblock %}</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <h1>Gio's Site</h1>
+
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/resume">Resume</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  {%- block main -%}{%- endblock -%}
+</body>
+
+</html>
