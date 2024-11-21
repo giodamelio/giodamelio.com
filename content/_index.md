@@ -2,6 +2,8 @@
 title = "Home"
 +++
 
+# Hi! I'm Giovanni d'Amelio
+
 I'm a programmer of things, lover of tinkering and learner of weird facts. I am always tinkering on some random project.
 
 ## Projects

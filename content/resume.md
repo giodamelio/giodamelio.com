@@ -2,6 +2,8 @@
 title = "Resume"
 +++
 
+# Resume
+
 You can find a web copy of the latest version of my resume at [https://resume.giodamelio.com](https://resume.giodamelio.com)
 
 A pdf is available at [https://resume.giodamelio.com/pdf](https://resume.giodamelio.com/pdf)
