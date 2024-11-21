@@ -1,5 +1,7 @@
 {% extends "section.html" %}
 
+{% import "macros.html" as macros %}
+
 {% block main %}
 {% set projects = get_section(path="blog/_index.md", metadata_only=true) %}
 <main>
@@ -7,7 +9,12 @@
 
   <ol>
   {% for page in section.pages %}
-    <li><a href="{{page.permalink}}">{{ page.title }}</a></li>
+    <li>
+      <a href="{{ page.permalink }}">{{ page.title }}</a>
+      {% for tag_name in page.taxonomies.tags %}
+      {{ macros::tag(name=tag_name, small=true) }}
+      {% endfor %}
+    </li>
   {% endfor %}
   </ol>
 </main>

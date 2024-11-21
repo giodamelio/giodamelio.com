@@ -8,6 +8,7 @@
 /* Default dark mode */
 :root {
   --background-color: #01242e;
+  --tag-background-color: #024254;
   --heading-color: #eee;
   --text-color: #ddd;
   --link-color: #8cc2dd;
@@ -21,6 +22,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --background-color: #fff;
+    --tag-background-color: #f2f2f2;
     --heading-color: #222;
     --text-color: #444;
     --link-color: #3273dc;
@@ -53,6 +55,25 @@ h1, h2, h3, h4, h5, h6 {
 h1.site-title {
   font-size: 1.5rem;
   margin-top: 0.2rem;
+}
+
+span.tag {
+  &.small {
+    font-size: 0.75em;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--tag-background-color);
+    border-radius: 1px;
+    padding: 3px 5px 3px 3px;
+
+    &::before {
+      content: "#";
+      margin-right: 0;
+    }
+  }
 }
 
 /* Make content centered and set the max content size */

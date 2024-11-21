@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block main %}
+<main>
+  <h1>Tags</h1>
+
+  <div style="display: flex">
+    {% for term in terms %}
+    <span style="margin-right: 5px">{{ macros::tag(name=term.name) }}</span>
+    {% endfor %}
+  </div>
+</main>
+{% endblock %}

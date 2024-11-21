@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% import "macros.html" as macros %}
+
+{% block main %}
+<main>
+  <h1>{{ macros::tag(name=term.name) }}</h1>
+
+  <ol>
+    {% for page in term.pages %}
+    <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+  </ol>
+</main>
+{% endblock %}
