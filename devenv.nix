@@ -1,11 +1,14 @@
-{ pkgs, lib, config, inputs, ... }:
+{ pkgs, lib, config, inputs, system, ... }: let
+  zola = pkgs.callPackage ./zola.nix { inherit inputs; };
+in {
+  languages.rust = {
+    enable = true;
+    channel = "nightly";
+  };
 
-{
-  languages.rust.enable = true;
-
-  packages = with pkgs; [
+  packages = [
     zola
-    emmet-ls
-    vscode-langservers-extracted
+    pkgs.emmet-ls
+    pkgs.vscode-langservers-extracted
   ];
 }
