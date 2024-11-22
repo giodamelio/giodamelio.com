@@ -11,4 +11,6 @@ in {
     pkgs.emmet-ls
     pkgs.vscode-langservers-extracted
   ];
+  
+  outputs.zola = zola;
 }
