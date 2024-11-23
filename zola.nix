@@ -1,4 +1,8 @@
-{ inputs, pkgs, lib }: let
+{
+  inputs,
+  pkgs,
+  lib,
+}: let
   system = pkgs.stdenv.system;
   rust_toolchain = inputs.fenix.packages.${system}.minimal.toolchain;
   rust_platform = pkgs.makeRustPlatform {
@@ -25,11 +29,14 @@
       installShellFiles
     ];
 
-    buildInputs = with pkgs; [
-      oniguruma
-    ] ++ lib.optionals pkgs.stdenv.hostPlatform.isDarwin (with pkgs.darwin.apple_sdk.frameworks; [
-      CoreServices SystemConfiguration
-    ]);
+    buildInputs = with pkgs;
+      [
+        oniguruma
+      ]
+      ++ lib.optionals pkgs.stdenv.hostPlatform.isDarwin (with pkgs.darwin.apple_sdk.frameworks; [
+        CoreServices
+        SystemConfiguration
+      ]);
 
     RUSTONIG_SYSTEM_LIBONIG = true;
 
@@ -40,7 +47,7 @@
         --zsh <($out/bin/zola completion zsh)
     '';
 
-    passthru.tests.version = pkgs.testers.testVersion { package = zola; };
+    passthru.tests.version = pkgs.testers.testVersion {package = zola;};
 
     meta = with lib; {
       description = "Fast static site generator with everything built-in";
@@ -48,7 +55,8 @@
       homepage = "https://www.getzola.org/";
       changelog = "https://github.com/getzola/zola/raw/v${version}/CHANGELOG.md";
       license = licenses.mit;
-      maintainers = with maintainers; [ dandellion dywedir _0x4A6F ];
+      maintainers = with maintainers; [dandellion dywedir _0x4A6F];
     };
   };
-in zola
+in
+  zola
