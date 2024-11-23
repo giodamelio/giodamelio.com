@@ -30,4 +30,4 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Check Format
-        run: nix check
+        run: nix flake check
