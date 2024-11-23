@@ -31,3 +31,15 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Check Format
         run: nix flake check
+
+  check-broken-links:
+    name: Check for Broken Links
+    runs-on: ubuntu-22.04
+    needs: publish
+    permissions:
+      id-token: "write"
+      contents: "read"
+    steps:
+      - name: Check Links
+        run: nix run nixpkgs#lychee "public/**/*.html"
+
