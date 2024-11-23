@@ -2,25 +2,20 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    make-shell.url = "github:nicknovitski/make-shell";
     treefmt-nix.url = "github:numtide/treefmt-nix";
-    devenv.url = "github:cachix/devenv";
     fenix.url = "github:nix-community/fenix";
     fenix.inputs.nixpkgs.follows = "nixpkgs";
-    devenv-root = {
-      url = "file+file:///dev/null";
-      flake = false;
-    };
   };
   outputs = inputs @ {
     flake-parts,
-    devenv-root,
     nixpkgs,
     ...
   }:
     flake-parts.lib.mkFlake {inherit inputs;} {
       imports = [
-        inputs.devenv.flakeModule
         inputs.treefmt-nix.flakeModule
+        inputs.make-shell.flakeModules.default
       ];
       systems = nixpkgs.lib.systems.flakeExposed;
 
@@ -41,23 +36,12 @@
           programs.alejandra.enable = true;
         };
 
-        devenv.shells.default = {
-          languages.rust = {
-            enable = true;
-            channel = "nightly";
-          };
-
+        make-shells.default = {
           packages = [
             config.packages.zola
             pkgs.emmet-ls
             pkgs.vscode-langservers-extracted
           ];
-
-          containers = pkgs.lib.mkForce {};
-          devenv.root = let
-            devenvRootFileContent = builtins.readFile devenv-root.outPath;
-          in
-            pkgs.lib.mkIf (devenvRootFileContent != "") devenvRootFileContent;
         };
       };
     };
