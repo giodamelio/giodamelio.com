@@ -69,5 +69,15 @@ jobs:
             https://giodamelio/blog
           uploadArtifacts: true
           temporaryPublicStorage: true
+  
+  wayback-machine:
+    name: Save Site to the Wayback Machine
+    runs-on: ubuntu-22.04
+    needs: publish
+    steps:
+      - name: Save to Wayback Machine
+        uses: JamieMagee/wayback@v2.1.0
+        with:
+          url: https://giodamelio.com
 
 
