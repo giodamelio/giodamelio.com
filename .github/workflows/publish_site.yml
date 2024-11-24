@@ -4,8 +4,8 @@ on:
   push:
 
 jobs:
-  publish:
-    name: Publish Site
+  build:
+    name: Build Site
     runs-on: ubuntu-22.04
     permissions:
       id-token: "write"
@@ -16,8 +16,22 @@ jobs:
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Build Site
         run: nix run .#zola -- build
-      - name: List Site Contents
-        run: ls -l public/
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+  
+  publish:
+    name: Publish Site
+    runs-on: ubuntu-22.04
+    needs: build
+    permissions:
+      id-token: "write"
+      pages: "read"
+    steps:
+      - name: Publish to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   check-format:
     name: Check Format
@@ -36,12 +50,9 @@ jobs:
     name: Check for Broken Links
     runs-on: ubuntu-22.04
     needs: publish
-    permissions:
-      id-token: "write"
-      contents: "read"
     steps:
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Check Links
-        run: nix run nixpkgs#lychee "public/**/*.html"
+        run: nix run nixpkgs#lychee "https://giodamelio.com"
 
