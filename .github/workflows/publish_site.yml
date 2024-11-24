@@ -40,6 +40,8 @@ jobs:
       id-token: "write"
       contents: "read"
     steps:
+      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Check Links
         run: nix run nixpkgs#lychee "public/**/*.html"
 
