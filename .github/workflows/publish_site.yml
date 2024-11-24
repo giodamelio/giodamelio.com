@@ -27,7 +27,7 @@ jobs:
     needs: build
     permissions:
       id-token: "write"
-      pages: "read"
+      pages: "write"
     steps:
       - name: Publish to Github Pages
         id: deployment
