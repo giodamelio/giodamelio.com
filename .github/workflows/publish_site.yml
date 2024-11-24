@@ -54,5 +54,5 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Check Links
-        run: nix run nixpkgs#lychee "https://giodamelio.com"
+        run: nix run nixpkgs#lychee -- "https://giodamelio.com" "https://giodamelio.com/sitemap.xml" --format=markdown --no-progress --verbose --output=$GITHUB_STEP_SUMMARY
 
