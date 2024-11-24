@@ -76,7 +76,7 @@ jobs:
     needs: publish
     steps:
       - name: Save to Wayback Machine
-        uses: JamieMagee/wayback@v2.1.0
+        uses: JamieMagee/wayback@v2.0.0
         with:
           url: https://giodamelio.com
 
