@@ -64,12 +64,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Audit URL using Lighthouse
         uses: treosh/lighthouse-ci-action@v12
+        id: lighthouse
         with:
           urls: |
             https://giodamelio.com
             https://giodamelio.com/blog/
           uploadArtifacts: true
           temporaryPublicStorage: true
+      - name: Display Report
+        uses: jackywithawhitedog/lighthouse-viewer-action@v2
+        with:
+          resultsPath: ${{ steps.lighthouse.outputs.resultsPath }}
+          lighthouseOutcome: ${{ steps.lighthouse.outcome }}
   
   wayback-machine:
     name: Save Site to the Wayback Machine
