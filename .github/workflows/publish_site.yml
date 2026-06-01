@@ -15,7 +15,7 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Build Site
-        run: nix run .#zola -- build
+        run: nix develop --command zola build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
