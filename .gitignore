@@ -10,3 +10,6 @@ devenv.local.nix
 
 # Zola
 public/
+
+# Random junk
+/tmp/
