@@ -15,15 +15,15 @@ jobs:
       id-token: "write"
       contents: "read"
     steps:
-      - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: DeterminateSystems/nix-installer-action@1d87d45818068401a10cf16bdc5f00b24994a83f # main
         with:
           summarize: ${{ runner.debug == '1' }}
-      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@14645543c3b214bedad3b9b49775cb042f4c1fc7 # main
       - name: Build Site
         run: nix develop --command zola build
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
           path: ./public
   
@@ -37,7 +37,7 @@ jobs:
     steps:
       - name: Publish to Github Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5
 
   check-format:
     name: Check Format
@@ -46,11 +46,11 @@ jobs:
       id-token: "write"
       contents: "read"
     steps:
-      - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: DeterminateSystems/nix-installer-action@1d87d45818068401a10cf16bdc5f00b24994a83f # main
         with:
           summarize: ${{ runner.debug == '1' }}
-      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@14645543c3b214bedad3b9b49775cb042f4c1fc7 # main
       - name: Check Format
         run: nix flake check
 
@@ -62,11 +62,11 @@ jobs:
       id-token: "write"
       contents: "read"
     steps:
-      - uses: actions/checkout@v4
-      - uses: DeterminateSystems/nix-installer-action@main
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+      - uses: DeterminateSystems/nix-installer-action@1d87d45818068401a10cf16bdc5f00b24994a83f # main
         with:
           summarize: ${{ runner.debug == '1' }}
-      - uses: DeterminateSystems/magic-nix-cache-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@14645543c3b214bedad3b9b49775cb042f4c1fc7 # main
       - name: Crawl Site for Page URLs
         run: |
           wget --spider --recursive --no-directories --no-verbose \
@@ -82,9 +82,9 @@ jobs:
     runs-on: ubuntu-22.04
     needs: publish
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
       - name: Audit URL using Lighthouse
-        uses: treosh/lighthouse-ci-action@v12
+        uses: treosh/lighthouse-ci-action@3e7e23fb74242897f95c0ba9cabad3d0227b9b18 # v12
         id: lighthouse
         with:
           urls: |
@@ -93,7 +93,7 @@ jobs:
           uploadArtifacts: true
           temporaryPublicStorage: true
       - name: Display Report
-        uses: jackywithawhitedog/lighthouse-viewer-action@v2
+        uses: jackywithawhitedog/lighthouse-viewer-action@068872e7ed5f3709e2024a24c3341e1b03a1f447 # v2
         with:
           resultsPath: ${{ steps.lighthouse.outputs.resultsPath }}
           lighthouseOutcome: ${{ steps.lighthouse.outcome }}
@@ -104,7 +104,7 @@ jobs:
     needs: publish
     steps:
       - name: Save to Wayback Machine
-        uses: JamieMagee/wayback@v2.0.0
+        uses: JamieMagee/wayback@e561c5018fb0e62988fddd732fb88345a3faa608 # v2.2.0
         with:
           url: https://giodamelio.com
 
