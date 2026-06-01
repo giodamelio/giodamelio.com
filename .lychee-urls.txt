@@ -1,0 +1,12 @@
+https://giodamelio.com/
+https://giodamelio.com/sitemap.xml
+https://giodamelio.com/
+https://giodamelio.com/blog/
+https://giodamelio.com/blog/test-post-please-ignore/
+https://giodamelio.com/contact/
+https://giodamelio.com/projects/
+https://giodamelio.com/projects/little-boxes/
+https://giodamelio.com/projects/nixos-configs/
+https://giodamelio.com/resume/
+https://giodamelio.com/tags/ignore/
+https://giodamelio.com/tags/test/

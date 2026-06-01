@@ -51,10 +51,18 @@ jobs:
     runs-on: ubuntu-22.04
     needs: publish
     steps:
+      - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
       - uses: DeterminateSystems/magic-nix-cache-action@main
+      - name: Crawl Site for Page URLs
+        run: |
+          wget --spider --recursive --no-directories --no-verbose \
+               --output-file=- https://giodamelio.com/ 2>&1 \
+            | grep -oP 'https://giodamelio\.com[^\s"]*' \
+            | grep -v '\.\(css\|png\|jpg\|svg\|ico\|xml\|txt\|js\)$' \
+            | sort -u >> .lychee-urls.txt
       - name: Check Links
-        run: nix run nixpkgs#lychee -- "https://giodamelio.com" "https://giodamelio.com/sitemap.xml" --format=markdown --no-progress --verbose --output="$GITHUB_STEP_SUMMARY"
+        run: nix develop --command lychee "https://giodamelio.com" --no-progress --output="$GITHUB_STEP_SUMMARY" --verbose
   
   lighthouse:
     name: Audit Site with Lighthouse

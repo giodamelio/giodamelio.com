@@ -1,0 +1,10 @@
+format = "markdown"
+files_from = ".lychee-urls.txt"
+
+accept = ["200", "403"]
+
+# I would like to limit the 403 accepting to a specific host,
+# but the config doesn't support that right now
+# https://github.com/lycheeverse/lychee/issues/2223
+# REMIND-ME-TO: Update config if feature is added issue_closed=github:lycheeverse/lychee#2223
+# [hosts."criticalrole.fandom.com"]
