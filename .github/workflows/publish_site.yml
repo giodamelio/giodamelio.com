@@ -17,6 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          summarize: ${{ runner.debug == '1' }}
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Build Site
         run: nix develop --command zola build
@@ -46,6 +48,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          summarize: ${{ runner.debug == '1' }}
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Check Format
         run: nix flake check
@@ -57,6 +61,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          summarize: ${{ runner.debug == '1' }}
       - uses: DeterminateSystems/magic-nix-cache-action@main
       - name: Crawl Site for Page URLs
         run: |
