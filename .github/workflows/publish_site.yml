@@ -58,6 +58,9 @@ jobs:
     name: Check for Broken Links
     runs-on: ubuntu-22.04
     needs: publish
+    permissions:
+      id-token: "write"
+      contents: "read"
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
