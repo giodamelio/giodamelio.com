@@ -12,6 +12,7 @@ Some random projects I have made or contributed to:
 
  - [little_boxes](https://github.com/giodamelio/little_boxes): Puts pretty boxes around stdin
  - [NixOS Config](https://github.com/giodamelio/nixos-configs): The NixOS configs that configure all my computers
+ - [Interactive map of Dol-Makjar](https://dol-makjar.giodamelio.com/): An web based interactive map of the fictional city of [Dol-Makjar](https://criticalrole.fandom.com/wiki/Dol-Makjar) from the [Critical Role](https://critrole.com/) Campaign 4 setting of Aramán
 
 ## I'm looking for work
 
